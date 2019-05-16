@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yijiupi.bi.mapper.IconclsMapper">
+    <resultMap id="BaseResultMap" type="com.yijiupi.bi.entity.Iconcls">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="clsId" jdbcType="VARCHAR" property="clsid"/>
+        <result column="descripe" jdbcType="VARCHAR" property="descripe"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, clsId, descripe
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from iconcls
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from iconcls
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insertSelective" parameterType="com.yijiupi.bi.entity.Iconcls">
+        insert into iconcls
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="clsid != null">
+                clsId,
+            </if>
+            <if test="descripe != null">
+                descripe,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="clsid != null">
+                #{clsid,jdbcType=VARCHAR},
+            </if>
+            <if test="descripe != null">
+                #{descripe,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.yijiupi.bi.entity.Iconcls">
+        update iconcls
+        <set>
+            <if test="clsid != null">
+                clsId = #{clsid,jdbcType=VARCHAR},
+            </if>
+            <if test="descripe != null">
+                descripe = #{descripe,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.yijiupi.bi.entity.Iconcls">
+    update iconcls
+    set clsId = #{clsid,jdbcType=VARCHAR},
+      descripe = #{descripe,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

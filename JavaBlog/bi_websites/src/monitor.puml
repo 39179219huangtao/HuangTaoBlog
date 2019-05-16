@@ -1,0 +1,33 @@
+@startuml
+actor user
+collections webSocketServer
+collections dataHandServer
+collections mqServer
+collections managerServer
+collections httpServer
+database redis
+database mq
+database mysql
+managerServer->managerServer:实时监控etcd节点变化
+user->webSocketServer:1.请求
+webSocketServer ->webSocketServer:2.1生成pageid,然后将ws连接缓存到内存中
+webSocketServer->managerServer:2.2组装数据pagelink,注册页面
+webSocketServer->mq:2.3开始监听mq数据
+managerServer->managerServer:3.1根据vccid计算出 datahandle节点和mq节点
+managerServer->dataHandServer:3.2根据计算出的datahandle节点,发送请求,注册页面
+managerServer->mqServer:3.3根据计算出的mq节点,发送请求,打开vccid的数据接收通道
+mqServer->mqServer:4.根据vccid打开数据接收监听
+dataHandServer->dataHandServer:5.1根据注册信息,进行数据处理,缓存到内存中
+dataHandServer ->httpServer:5.2根据pagelink,请求http接口,获取初始化数据
+httpServer ->redis:获取实时数据
+dataHandServer->mysql:5.3获取部分manager权限
+dataHandServer->dataHandServer:5.4处理数据,并更新pagelink部分权限(坐席,技能组,业务组)
+dataHandServer ->mq:5.5将数据发送到mq
+mqServer->dataHandServer:将企业最新数据发送到对应的dataHandServer
+dataHandServer ->dataHandServer:5.6处理实时数据,缓存到vccdata对象中
+dataHandServer ->dataHandServer:5.7等待taskheap的信号,开始组装pagelink的数据
+dataHandServer ->mq:5.8将pagelink组装好的实时数据根据规则发送到mq中
+mq ->webSocketServer:webSocketServer收到数据
+webSocketServer ->webSocketServer:6.1根据pageid寻找对应ws连接
+webSocketServer ->user:6.2将数据通过ws连接发给前端用户页面
+@enduml

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yijiupi.bi.mapper.FrCorepMapper">
+    <resultMap id="BaseResultMap" type="com.yijiupi.bi.entity.FrCorep">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="roleid" jdbcType="BIGINT" property="roleid"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="entryid" jdbcType="BIGINT" property="entryid"/>
+        <result column="view" jdbcType="BIGINT" property="view"/>
+        <result column="authorized" jdbcType="BIGINT" property="authorized"/>
+        <result column="edit" jdbcType="BIGINT" property="edit"/>
+        <result column="export" jdbcType="BIGINT" property="export"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, roleid, type, entryid, view, authorized, edit, export
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from fr_t_corep
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="getAllDepartmentPostCorepByPostId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from fr_t_corep
+        WHERE roleid
+        IN (
+        SELECT id FROM `fr_t_companyrole` WHERE departmentid=30
+        and postid= #{postId,jdbcType=BIGINT})
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from fr_t_corep
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+    <insert id="insertSelective" parameterType="com.yijiupi.bi.entity.FrCorep">
+        insert into fr_t_corep
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="roleid != null">
+                roleid,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="entryid != null">
+                entryid,
+            </if>
+            <if test="view != null">
+                view,
+            </if>
+            <if test="authorized != null">
+                authorized,
+            </if>
+            <if test="edit != null">
+                edit,
+            </if>
+            <if test="export != null">
+                export,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="roleid != null">
+                #{roleid,jdbcType=BIGINT},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=INTEGER},
+            </if>
+            <if test="entryid != null">
+                #{entryid,jdbcType=BIGINT},
+            </if>
+            <if test="view != null">
+                #{view,jdbcType=BIGINT},
+            </if>
+            <if test="authorized != null">
+                #{authorized,jdbcType=BIGINT},
+            </if>
+            <if test="edit != null">
+                #{edit,jdbcType=BIGINT},
+            </if>
+            <if test="export != null">
+                #{export,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.yijiupi.bi.entity.FrCorep">
+        update fr_t_corep
+        <set>
+            <if test="roleid != null">
+                roleid = #{roleid,jdbcType=BIGINT},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=INTEGER},
+            </if>
+            <if test="entryid != null">
+                entryid = #{entryid,jdbcType=BIGINT},
+            </if>
+            <if test="view != null">
+                view = #{view,jdbcType=BIGINT},
+            </if>
+            <if test="authorized != null">
+                authorized = #{authorized,jdbcType=BIGINT},
+            </if>
+            <if test="edit != null">
+                edit = #{edit,jdbcType=BIGINT},
+            </if>
+            <if test="export != null">
+                export = #{export,jdbcType=BIGINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.yijiupi.bi.entity.FrCorep">
+    update fr_t_corep
+    set roleid = #{roleid,jdbcType=BIGINT},
+      type = #{type,jdbcType=INTEGER},
+      entryid = #{entryid,jdbcType=BIGINT},
+      view = #{view,jdbcType=BIGINT},
+      authorized = #{authorized,jdbcType=BIGINT},
+      edit = #{edit,jdbcType=BIGINT},
+      export = #{export,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
