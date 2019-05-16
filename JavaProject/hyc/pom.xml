@@ -11,6 +11,11 @@
     <modules>
         <module>hyc-admin</module>
         <module>hyc-web</module>
+        <module>hyc-order</module>
+        <module>hyc-common</module>
+        <module>hyc-pay</module>
+        <module>hyc-search</module>
+        <module>hyc-mobile</module>
     </modules>
 
 
