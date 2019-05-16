@@ -51,6 +51,7 @@
         <module>hyc-pay</module>
         <module>hyc-search</module>
         <module>hyc-mobile</module>
+        <module>hyc-product</module>
     </modules>
 
 
