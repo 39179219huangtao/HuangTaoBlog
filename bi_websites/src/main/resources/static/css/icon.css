@@ -1,0 +1,903 @@
+.icon-blank {
+    background: url('icons/blank.gif') no-repeat center center;
+}
+
+.icon-add {
+    background: url('icons/edit_add.png') no-repeat center center;
+}
+
+.icon-edit {
+    background: url('icons/pencil.png') no-repeat center center;
+}
+
+.icon-clear {
+    background: url('icons/clear.png') no-repeat center center;
+}
+
+.icon-remove {
+    background: url('icons/edit_remove.png') no-repeat center center;
+}
+
+.icon-save {
+    background: url('icons/filesave.png') no-repeat center center;
+}
+
+.icon-cut {
+    background: url('icons/cut.png') no-repeat center center;
+}
+
+.icon-pencil {
+    background: url('icons/pencil.png') no-repeat center center;
+}
+
+.icon-ok {
+    background: url('icons/ok.png') no-repeat center center;
+}
+
+.icon-no {
+    background: url('icons/no.png') no-repeat center center;
+}
+
+.icon-cancel {
+    background: url('icons/cancel.png') no-repeat center center;
+}
+
+.icon-reload {
+    background: url('icons/reload.png') no-repeat center center;
+}
+
+.icon-search {
+    background: url('icons/search.png') no-repeat center center;
+}
+
+.icon-print {
+    background: url('icons/print.png') no-repeat center center;
+}
+
+.icon-help {
+    background: url('icons/help.png') no-repeat center center;
+}
+
+.icon-undo {
+    background: url('icons/undo.png') no-repeat center center;
+}
+
+.icon-redo {
+    background: url('icons/redo.png') no-repeat center center;
+}
+
+.icon-back {
+    background: url('icons/back.png') no-repeat center center;
+}
+
+.icon-sum {
+    background: url('icons/sum.png') no-repeat center center;
+}
+
+.icon-tip {
+    background: url('icons/tip.png') no-repeat center center;
+}
+
+.icon-filter {
+    background: url('icons/filter.png') no-repeat center center;
+}
+
+.icon-man {
+    background: url('icons/man.png') no-repeat center center;
+}
+
+.icon-lock {
+    background: url('icons/lock.png') no-repeat center center;
+}
+
+.icon-more {
+    background: url('icons/more.png') no-repeat center center;
+}
+
+.icon-mini-add {
+    background: url('icons/mini_add.png') no-repeat center center;
+}
+
+.icon-mini-edit {
+    background: url('icons/mini_edit.png') no-repeat center center;
+}
+
+.icon-mini-refresh {
+    background: url('icons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-large-picture {
+    background: url('icons/large_picture.png') no-repeat center center;
+}
+
+.icon-large-clipart {
+    background: url('icons/large_clipart.png') no-repeat center center;
+}
+
+.icon-large-shapes {
+    background: url('icons/large_shapes.png') no-repeat center center;
+}
+
+.icon-large-smartart {
+    background: url('icons/large_smartart.png') no-repeat center center;
+}
+
+.icon-large-chart {
+    background: url('icons/large_chart.png') no-repeat center center;
+}
+
+.icon-large-house {
+    background: url('icons/house.png') no-repeat center center;
+}
+
+.icon-large-note {
+    background: url('icons/note.png') no-repeat center center;
+}
+
+.icon-large-table_multiple {
+    background: url('icons/table_multiple.png') no-repeat center center;
+}
+
+.icon-large-text_signature {
+    background: url('icons/text_signature.png') no-repeat center center;
+}
+
+.icon-large-vcard {
+    background: url('icons/vcard.png') no-repeat center center;
+}
+
+.icon-large-page_key {
+    background: url('icons/page_key.png') no-repeat center center;
+}
+
+.icon-large-phone {
+    background: url('icons/phone.png') no-repeat center center;
+}
+
+/*
+自定义图标
+ */
+
+.icon-udf-acorn {
+    background: url('../menuicons/acorn.png') no-repeat center center;
+}
+
+.icon-udf-application_form_magnify {
+    background: url('../menuicons/application_form_magnify.png') no-repeat center center;
+}
+
+.icon-udf-application_view_columns {
+    background: url('../menuicons/application_view_columns.png') no-repeat center center;
+}
+
+.icon-udf-application_view_detail {
+    background: url('../menuicons/application_view_detail.png') no-repeat center center;
+}
+
+.icon-udf-application_view_gallery {
+    background: url('../menuicons/application_view_gallery.png') no-repeat center center;
+}
+
+.icon-udf-application_view_list {
+    background: url('../menuicons/application_view_list.png') no-repeat center center;
+}
+
+.icon-udf-auth {
+    background: url('../menuicons/auth.png') no-repeat center center;
+}
+
+.icon-udf-back {
+    background: url('../menuicons/back.png') no-repeat center center;
+}
+
+.icon-udf-baggage_cart_box {
+    background: url('../menuicons/baggage_cart_box.png') no-repeat center center;
+}
+
+.icon-udf-Bar_Chart {
+    background: url('../menuicons/Bar_Chart.png') no-repeat center center;
+}
+
+.icon-udf-bill {
+    background: url('../menuicons/bill.png') no-repeat center center;
+}
+
+.icon-udf-blank {
+    background: url('../menuicons/blank.png') no-repeat center center;
+}
+
+.icon-udf-box {
+    background: url('../menuicons/box.png') no-repeat center center;
+}
+
+.icon-udf-bricks {
+    background: url('../menuicons/bricks.png') no-repeat center center;
+}
+
+.icon-udf-brick_go {
+    background: url('../menuicons/brick_go.png') no-repeat center center;
+}
+
+.icon-udf-calculator {
+    background: url('../menuicons/calculator.png') no-repeat center center;
+}
+
+.icon-udf-calendar {
+    background: url('../menuicons/calendar.png') no-repeat center center;
+}
+
+.icon-udf-calendar_edit {
+    background: url('../menuicons/calendar_edit.png') no-repeat center center;
+}
+
+.icon-udf-calendar_view_day {
+    background: url('../menuicons/calendar_view_day.png') no-repeat center center;
+}
+
+.icon-udf-calendar_view_month {
+    background: url('../menuicons/calendar_view_month.png') no-repeat center center;
+}
+
+.icon-udf-calendar_view_week {
+    background: url('../menuicons/calendar_view_week.png') no-repeat center center;
+}
+
+.icon-udf-cancel {
+    background: url('../menuicons/cancel.png') no-repeat center center;
+}
+
+.icon-udf-cart_go {
+    background: url('../menuicons/cart_go.png') no-repeat center center;
+}
+
+.icon-udf-cart_put {
+    background: url('../menuicons/cart_put.png') no-repeat center center;
+}
+
+.icon-udf-cart_remove {
+    background: url('../menuicons/cart_remove.png') no-repeat center center;
+}
+
+.icon-udf-chart_bar {
+    background: url('../menuicons/chart_bar.png') no-repeat center center;
+}
+
+.icon-udf-chart_bar_link {
+    background: url('../menuicons/chart_bar_link.png') no-repeat center center;
+}
+
+.icon-udf-chart_bar_new {
+    background: url('../menuicons/chart_bar_new.png') no-repeat center center;
+}
+
+.icon-udf-chart_curve {
+    background: url('../menuicons/chart_curve.png') no-repeat center center;
+}
+
+.icon-udf-chart_curve_go {
+    background: url('../menuicons/chart_curve_go.png') no-repeat center center;
+}
+
+.icon-udf-chart_curve_link {
+    background: url('../menuicons/chart_curve_link.png') no-repeat center center;
+}
+
+.icon-udf-chart_curve_new {
+    background: url('../menuicons/chart_curve_new.png') no-repeat center center;
+}
+
+.icon-udf-chart_line {
+    background: url('../menuicons/chart_line.png') no-repeat center center;
+}
+
+.icon-udf-chart_line_link {
+    background: url('../menuicons/chart_line_link.png') no-repeat center center;
+}
+
+.icon-udf-chart_minus {
+    background: url('../menuicons/chart_minus.png') no-repeat center center;
+}
+
+.icon-udf-chart_organisation {
+    background: url('../menuicons/chart_organisation.png') no-repeat center center;
+}
+
+.icon-udf-chart_pie {
+    background: url('../menuicons/chart_pie.png') no-repeat center center;
+}
+
+.icon-udf-chart_pie_link {
+    background: url('../menuicons/chart_pie_link.png') no-repeat center center;
+}
+
+.icon-udf-chart_up_blue {
+    background: url('../menuicons/chart_up_blue.png') no-repeat center center;
+}
+
+.icon-udf-chart_up_green {
+    background: url('../menuicons/chart_up_green.png') no-repeat center center;
+}
+
+.icon-udf-clear {
+    background: url('../menuicons/clear.png') no-repeat center center;
+}
+
+.icon-udf-clearjob {
+    background: url('../menuicons/clearjob.png') no-repeat center center;
+}
+
+.icon-udf-close {
+    background: url('../menuicons/close.png') no-repeat center center;
+}
+
+.icon-udf-coins {
+    background: url('../menuicons/coins.png') no-repeat center center;
+}
+
+.icon-udf-comment {
+    background: url('../menuicons/comment.png') no-repeat center center;
+}
+
+.icon-udf-comments {
+    background: url('../menuicons/comments.png') no-repeat center center;
+}
+
+.icon-udf-computer_go {
+    background: url('../menuicons/computer_go.png') no-repeat center center;
+}
+
+.icon-udf-convert {
+    background: url('../menuicons/convert.png') no-repeat center center;
+}
+
+.icon-udf-cookies {
+    background: url('../menuicons/cookies.png') no-repeat center center;
+}
+
+.icon-udf-copy {
+    background: url('../menuicons/copy.png') no-repeat center center;
+}
+
+.icon-udf-csv {
+    background: url('../menuicons/csv.png') no-repeat center center;
+}
+
+.icon-udf-cut {
+    background: url('../menuicons/cut.png') no-repeat center center;
+}
+
+.icon-udf-database_connect {
+    background: url('../menuicons/database_connect.png') no-repeat center center;
+}
+
+.icon-udf-database_go {
+    background: url('../menuicons/database_go.png') no-repeat center center;
+}
+
+.icon-udf-database_key {
+    background: url('../menuicons/database_key.png') no-repeat center center;
+}
+
+.icon-udf-database_lightning {
+    background: url('../menuicons/database_lightning.png') no-repeat center center;
+}
+
+.icon-udf-database_refresh {
+    background: url('../menuicons/database_refresh.png') no-repeat center center;
+}
+
+.icon-udf-database_table {
+    background: url('../menuicons/database_table.png') no-repeat center center;
+}
+
+.icon-udf-date {
+    background: url('../menuicons/date.png') no-repeat center center;
+}
+
+.icon-udf-delete {
+    background: url('../menuicons/delete.png') no-repeat center center;
+}
+
+.icon-udf-desk_chair {
+    background: url('../menuicons/desk_chair.png') no-repeat center center;
+}
+
+.icon-udf-detail {
+    background: url('../menuicons/detail.png') no-repeat center center;
+}
+
+.icon-udf-drink_food {
+    background: url('../menuicons/drink_food.png') no-repeat center center;
+}
+
+.icon-udf-drink_soft {
+    background: url('../menuicons/drink_soft.png') no-repeat center center;
+}
+
+.icon-udf-edit {
+    background: url('../menuicons/edit.png') no-repeat center center;
+}
+
+.icon-udf-edit_add {
+    background: url('../menuicons/edit_add.png') no-repeat center center;
+}
+
+.icon-udf-edit_remove {
+    background: url('../menuicons/edit_remove.png') no-repeat center center;
+}
+
+.icon-udf-excel {
+    background: url('../menuicons/excel.png') no-repeat center center;
+}
+
+.icon-udf-excelt {
+    background: url('../menuicons/excelt.png') no-repeat center center;
+}
+
+.icon-udf-export {
+    background: url('../menuicons/export.png') no-repeat center center;
+}
+
+.icon-udf-filesave {
+    background: url('../menuicons/filesave.png') no-repeat center center;
+}
+
+.icon-udf-filter {
+    background: url('../menuicons/filter.png') no-repeat center center;
+}
+
+.icon-udf-folder {
+    background: url('../menuicons/folder.png') no-repeat center center;
+}
+
+.icon-udf-folder_bell {
+    background: url('../menuicons/folder_bell.png') no-repeat center center;
+}
+
+.icon-udf-folder_brick {
+    background: url('../menuicons/folder_brick.png') no-repeat center center;
+}
+
+.icon-udf-folder_database {
+    background: url('../menuicons/folder_database.png') no-repeat center center;
+}
+
+.icon-udf-folder_explore {
+    background: url('../menuicons/folder_explore.png') no-repeat center center;
+}
+
+.icon-udf-folder_feed {
+    background: url('../menuicons/folder_feed.png') no-repeat center center;
+}
+
+.icon-udf-folder_find {
+    background: url('../menuicons/folder_find.png') no-repeat center center;
+}
+
+.icon-udf-folder_go {
+    background: url('../menuicons/folder_go.png') no-repeat center center;
+}
+
+.icon-udf-folder_heart {
+    background: url('../menuicons/folder_heart.png') no-repeat center center;
+}
+
+.icon-udf-folder_image {
+    background: url('../menuicons/folder_image.png') no-repeat center center;
+}
+
+.icon-udf-folder_key {
+    background: url('../menuicons/folder_key.png') no-repeat center center;
+}
+
+.icon-udf-folder_lightbulb {
+    background: url('../menuicons/folder_lightbulb.png') no-repeat center center;
+}
+
+.icon-udf-folder_link {
+    background: url('../menuicons/folder_link.png') no-repeat center center;
+}
+
+.icon-udf-folder_magnify {
+    background: url('../menuicons/folder_magnify.png') no-repeat center center;
+}
+
+.icon-udf-folder_page {
+    background: url('../menuicons/folder_page.png') no-repeat center center;
+}
+
+.icon-udf-folder_page_white {
+    background: url('../menuicons/folder_page_white.png') no-repeat center center;
+}
+
+.icon-udf-folder_palette {
+    background: url('../menuicons/folder_palette.png') no-repeat center center;
+}
+
+.icon-udf-folder_picture {
+    background: url('../menuicons/folder_picture.png') no-repeat center center;
+}
+
+.icon-udf-folder_star {
+    background: url('../menuicons/folder_star.png') no-repeat center center;
+}
+
+.icon-udf-folder_table {
+    background: url('../menuicons/folder_table.png') no-repeat center center;
+}
+
+.icon-udf-folder_user {
+    background: url('../menuicons/folder_user.png') no-repeat center center;
+}
+
+.icon-udf-folder_wrench {
+    background: url('../menuicons/folder_wrench.png') no-repeat center center;
+}
+
+.icon-udf-gears {
+    background: url('../menuicons/gears.png') no-repeat center center;
+}
+
+.icon-udf-gray_check_notok {
+    background: url('../menuicons/gray_check_notok.png') no-repeat center center;
+}
+
+.icon-udf-gray_check_ok {
+    background: url('../menuicons/gray_check_ok.png') no-repeat center center;
+}
+
+.icon-udf-group {
+    background: url('../menuicons/group.png') no-repeat center center;
+}
+
+.icon-udf-group_go {
+    background: url('../menuicons/group_go.png') no-repeat center center;
+}
+
+.icon-udf-group_key {
+    background: url('../menuicons/group_key.png') no-repeat center center;
+}
+
+.icon-udf-hand {
+    background: url('../menuicons/hand.png') no-repeat center center;
+}
+
+.icon-udf-help {
+    background: url('../menuicons/help.png') no-repeat center center;
+}
+
+.icon-udf-html {
+    background: url('../menuicons/html.png') no-repeat center center;
+}
+
+.icon-udf-image_link {
+    background: url('../menuicons/image_link.png') no-repeat center center;
+}
+
+.icon-udf-large_byday {
+    background: url('../menuicons/large_byday.png') no-repeat center center;
+}
+
+.icon-udf-large_bymonth {
+    background: url('../menuicons/large_bymonth.png') no-repeat center center;
+}
+
+.icon-udf-large_byweek {
+    background: url('../menuicons/large_byweek.png') no-repeat center center;
+}
+
+.icon-udf-large_chart {
+    background: url('../menuicons/large_chart.png') no-repeat center center;
+}
+
+.icon-udf-large_clipart {
+    background: url('../menuicons/large_clipart.png') no-repeat center center;
+}
+
+.icon-udf-large_export {
+    background: url('../menuicons/large_export.png') no-repeat center center;
+}
+
+.icon-udf-large_lookup {
+    background: url('../menuicons/large_lookup.png') no-repeat center center;
+}
+
+.icon-udf-large_paste {
+    background: url('../menuicons/large_paste.png') no-repeat center center;
+}
+
+.icon-udf-large_picture {
+    background: url('../menuicons/large_picture.png') no-repeat center center;
+}
+
+.icon-udf-large_shapes {
+    background: url('../menuicons/large_shapes.png') no-repeat center center;
+}
+
+.icon-udf-large_smartart {
+    background: url('../menuicons/large_smartart.png') no-repeat center center;
+}
+
+.icon-udf-large_table {
+    background: url('../menuicons/large_table.png') no-repeat center center;
+}
+
+.icon-udf-lock {
+    background: url('../menuicons/lock.png') no-repeat center center;
+}
+
+.icon-udf-logout {
+    background: url('../menuicons/logout.png') no-repeat center center;
+}
+
+.icon-udf-lookup {
+    background: url('../menuicons/lookup.png') no-repeat center center;
+}
+
+.icon-udf-lorry {
+    background: url('../menuicons/lorry.png') no-repeat center center;
+}
+
+.icon-udf-lorry_go {
+    background: url('../menuicons/lorry_go.png') no-repeat center center;
+}
+
+.icon-udf-lorry_link {
+    background: url('../menuicons/lorry_link.png') no-repeat center center;
+}
+
+.icon-udf-man {
+    background: url('../menuicons/man.png') no-repeat center center;
+}
+
+.icon-udf-map {
+    background: url('../menuicons/map.png') no-repeat center center;
+}
+
+.icon-udf-menu {
+    background: url('../menuicons/menu.png') no-repeat center center;
+}
+
+.icon-udf-menuItem {
+    background: url('../menuicons/menuItem.png') no-repeat center center;
+}
+
+.icon-udf-milk {
+    background: url('../menuicons/milk.png') no-repeat center center;
+}
+
+.icon-udf-mini_add {
+    background: url('../menuicons/mini_add.png') no-repeat center center;
+}
+
+.icon-udf-mini_edit {
+    background: url('../menuicons/mini_edit.png') no-repeat center center;
+}
+
+.icon-udf-mini_refresh {
+    background: url('../menuicons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-udf-money {
+    background: url('../menuicons/money.png') no-repeat center center;
+}
+
+.icon-udf-money_yen {
+    background: url('../menuicons/money_yen.png') no-repeat center center;
+}
+
+.icon-udf-next {
+    background: url('../menuicons/next.png') no-repeat center center;
+}
+
+.icon-udf-no {
+    background: url('../menuicons/no.png') no-repeat center center;
+}
+
+.icon-udf-note {
+    background: url('../menuicons/note.png') no-repeat center center;
+}
+
+.icon-udf-note_go {
+    background: url('../menuicons/note_go.png') no-repeat center center;
+}
+
+.icon-udf-ok {
+    background: url('../menuicons/ok.png') no-repeat center center;
+}
+
+.icon-udf-package_go {
+    background: url('../menuicons/package_go.png') no-repeat center center;
+}
+
+.icon-udf-package_green {
+    background: url('../menuicons/package_green.png') no-repeat center center;
+}
+
+.icon-udf-page {
+    background: url('../menuicons/page.png') no-repeat center center;
+}
+
+.icon-udf-pass {
+    background: url('../menuicons/pass.png') no-repeat center center;
+}
+
+.icon-udf-pdf {
+    background: url('../menuicons/pdf.png') no-repeat center center;
+}
+
+.icon-udf-pdft {
+    background: url('../menuicons/pdft.png') no-repeat center center;
+}
+
+.icon-udf-pencil {
+    background: url('../menuicons/pencil.png') no-repeat center center;
+}
+
+.icon-udf-picture {
+    background: url('../menuicons/picture.png') no-repeat center center;
+}
+
+.icon-udf-plus {
+    background: url('../menuicons/plus.png') no-repeat center center;
+}
+
+.icon-udf-previous {
+    background: url('../menuicons/previous.png') no-repeat center center;
+}
+
+.icon-udf-print {
+    background: url('../menuicons/print.png') no-repeat center center;
+}
+
+.icon-udf-qq {
+    background: url('../menuicons/qq.png') no-repeat center center;
+}
+
+.icon-udf-redo {
+    background: url('../menuicons/redo.png') no-repeat center center;
+}
+
+.icon-udf-reload {
+    background: url('../menuicons/reload.png') no-repeat center center;
+}
+
+.icon-udf-report {
+    background: url('../menuicons/report.png') no-repeat center center;
+}
+
+.icon-udf-report_go {
+    background: url('../menuicons/report_go.png') no-repeat center center;
+}
+
+.icon-udf-return {
+    background: url('../menuicons/return.png') no-repeat center center;
+}
+
+.icon-udf-search {
+    background: url('../menuicons/search.png') no-repeat center center;
+}
+
+.icon-udf-send {
+    background: url('../menuicons/send.png') no-repeat center center;
+}
+
+.icon-udf-server {
+    background: url('../menuicons/server.png') no-repeat center center;
+}
+
+.icon-udf-server_database {
+    background: url('../menuicons/server_database.png') no-repeat center center;
+}
+
+.icon-udf-server_go {
+    background: url('../menuicons/server_go.png') no-repeat center center;
+}
+
+.icon-udf-show {
+    background: url('../menuicons/show.png') no-repeat center center;
+}
+
+.icon-udf-statistics-circle {
+    background: url('../menuicons/statistics-circle.png') no-repeat center center;
+}
+
+.icon-udf-statistics-line {
+    background: url('../menuicons/statistics-line.png') no-repeat center center;
+}
+
+.icon-udf-statistics-rectangle {
+    background: url('../menuicons/statistics-rectangle.png') no-repeat center center;
+}
+
+.icon-udf-sum {
+    background: url('../menuicons/sum.png') no-repeat center center;
+}
+
+.icon-udf-table {
+    background: url('../menuicons/table.png') no-repeat center center;
+}
+
+.icon-udf-tablecopy {
+    background: url('../menuicons/tablecopy.png') no-repeat center center;
+}
+
+.icon-udf-table_go {
+    background: url('../menuicons/table_go.png') no-repeat center center;
+}
+
+.icon-udf-table_multiple {
+    background: url('../menuicons/table_multiple.png') no-repeat center center;
+}
+
+.icon-udf-tea_yahoo {
+    background: url('../menuicons/tea_yahoo.png') no-repeat center center;
+}
+
+.icon-udf-text {
+    background: url('../menuicons/text.png') no-repeat center center;
+}
+
+.icon-udf-tick {
+    background: url('../menuicons/tick.png') no-repeat center center;
+}
+
+.icon-udf-tiff {
+    background: url('../menuicons/tiff.png') no-repeat center center;
+}
+
+.icon-udf-tip {
+    background: url('../menuicons/tip.png') no-repeat center center;
+}
+
+.icon-udf-undo {
+    background: url('../menuicons/undo.png') no-repeat center center;
+}
+
+.icon-udf-unknow {
+    background: url('../menuicons/unknow.png') no-repeat center center;
+}
+
+.icon-udf-user {
+    background: url('../menuicons/user.png') no-repeat center center;
+}
+
+.icon-udf-user_go {
+    background: url('../menuicons/user_go.png') no-repeat center center;
+}
+
+.icon-udf-user_green {
+    background: url('../menuicons/user_green.png') no-repeat center center;
+}
+
+.icon-udf-user_orange {
+    background: url('../menuicons/user_orange.png') no-repeat center center;
+}
+
+.icon-udf-user_red {
+    background: url('../menuicons/user_red.png') no-repeat center center;
+}
+
+.icon-udf-user_suit {
+    background: url('../menuicons/user_suit.png') no-repeat center center;
+}
+
+.icon-udf-view {
+    background: url('../menuicons/view.png') no-repeat center center;
+}
+
+.icon-udf-word {
+    background: url('../menuicons/word.png') no-repeat center center;
+}
+
+.icon-udf-wordt {
+    background: url('../menuicons/wordt.png') no-repeat center center;
+}
+
+.icon-udf-xml {
+    background: url('../menuicons/xml.png') no-repeat center center;
+}
+
+.icon-udf-yes {
+    background: url('../menuicons/yes.png') no-repeat center center;
+}
