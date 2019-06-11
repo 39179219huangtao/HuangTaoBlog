@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = KlockConfig.PREFIX)
 public class KlockConfig {
 
-    public static final String PREFIX = "spring.klock";
+    public static final String PREFIX = "hyc.microlock";
     //redisson
     private String address;
     private String password;

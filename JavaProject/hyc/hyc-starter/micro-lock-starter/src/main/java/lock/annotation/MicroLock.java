@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
  */
 @Target(value = {ElementType.METHOD})
 @Retention(value = RetentionPolicy.RUNTIME)
-public @interface Klock {
+public @interface MicroLock {
     /**
      * 锁的名称
      * @return name

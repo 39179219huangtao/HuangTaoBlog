@@ -1,5 +1,6 @@
 package lock.core;
 
+import lock.annotation.MicroLock;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -10,7 +11,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import lock.annotation.Klock;
 import lock.handler.KlockInvocationException;
 import lock.lock.Lock;
 import lock.lock.LockFactory;
@@ -42,9 +42,9 @@ public class KlockAspectHandler {
     private ThreadLocal<Lock> currentThreadLock = new ThreadLocal<>();
     private ThreadLocal<LockRes> currentThreadLockRes = new ThreadLocal<>();
 
-    @Around(value = "@annotation(klock)")
-    public Object around(ProceedingJoinPoint joinPoint, Klock klock) throws Throwable {
-        LockInfo lockInfo = lockInfoProvider.get(joinPoint,klock);
+    @Around(value = "@annotation(microLock)")
+    public Object around(ProceedingJoinPoint joinPoint, MicroLock microLock) throws Throwable {
+        LockInfo lockInfo = lockInfoProvider.get(joinPoint,microLock);
         currentThreadLockRes.set(new LockRes(lockInfo, false));
         Lock lock = lockFactory.getLock(lockInfo);
         boolean lockRes = lock.acquire();
@@ -54,12 +54,12 @@ public class KlockAspectHandler {
                 logger.warn("Timeout while acquiring Lock({})", lockInfo.getName());
             }
 
-            if(!StringUtils.isEmpty(klock.customLockTimeoutStrategy())) {
+            if(!StringUtils.isEmpty(microLock.customLockTimeoutStrategy())) {
 
-                return handleCustomLockTimeout(klock.customLockTimeoutStrategy(), joinPoint);
+                return handleCustomLockTimeout(microLock.customLockTimeoutStrategy(), joinPoint);
 
             } else {
-                klock.lockTimeoutStrategy().handle(lockInfo, lock, joinPoint);
+                microLock.lockTimeoutStrategy().handle(lockInfo, lock, joinPoint);
             }
         }
 
@@ -70,14 +70,14 @@ public class KlockAspectHandler {
     }
 
     @AfterReturning(value = "@annotation(klock)")
-    public void afterReturning(JoinPoint joinPoint, Klock klock) throws Throwable {
+    public void afterReturning(JoinPoint joinPoint, MicroLock klock) throws Throwable {
 
         releaseLock(klock, joinPoint);
         cleanUpThreadLocal();
     }
 
     @AfterThrowing(value = "@annotation(klock)", throwing = "ex")
-    public void afterThrowing (JoinPoint joinPoint, Klock klock, Throwable ex) throws Throwable {
+    public void afterThrowing (JoinPoint joinPoint, MicroLock klock, Throwable ex) throws Throwable {
 
         releaseLock(klock, joinPoint);
         cleanUpThreadLocal();
@@ -117,7 +117,7 @@ public class KlockAspectHandler {
     /**
      *  释放锁
      */
-    private void releaseLock(Klock klock, JoinPoint joinPoint) throws Throwable {
+    private void releaseLock(MicroLock klock, JoinPoint joinPoint) throws Throwable {
         LockRes lockRes = currentThreadLockRes.get();
         if (lockRes.getRes()) {
             boolean releaseRes = currentThreadLock.get().release();
@@ -133,7 +133,7 @@ public class KlockAspectHandler {
     /**
      *  处理释放锁时已超时
      */
-    private void handleReleaseTimeout(Klock klock, LockInfo lockInfo, JoinPoint joinPoint) throws Throwable {
+    private void handleReleaseTimeout(MicroLock klock, LockInfo lockInfo, JoinPoint joinPoint) throws Throwable {
 
         if(logger.isWarnEnabled()) {
             logger.warn("Timeout while release Lock({})", lockInfo.getName());

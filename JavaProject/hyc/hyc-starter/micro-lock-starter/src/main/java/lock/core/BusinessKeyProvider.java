@@ -2,18 +2,16 @@ package lock.core;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
-import lock.annotation.Klock;
+import lock.annotation.MicroLock;
 import org.springframework.context.expression.MethodBasedEvaluationContext;
 import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.ParameterNameDiscoverer;
 import org.springframework.expression.EvaluationContext;
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
-import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Method;
-import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +25,7 @@ public class BusinessKeyProvider {
 
     private ExpressionParser parser = new SpelExpressionParser();
 
-    public String getKeyName(ProceedingJoinPoint joinPoint, Klock klock) {
+    public String getKeyName(ProceedingJoinPoint joinPoint, MicroLock klock) {
         List<String> keyList = new ArrayList<>();
         Method method = getMethod(joinPoint);
         List<String> definitionKeys = getSpelDefinitionKey(klock.keys(), method, joinPoint.getArgs());
