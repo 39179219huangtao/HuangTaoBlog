@@ -1,6 +1,6 @@
 package lock.model;
 
-import lock.handler.KlockTimeoutException;
+import lock.handler.MicroLockInvocationException;
 import lock.handler.release.ReleaseTimeoutHandler;
 
 /**
@@ -26,7 +26,7 @@ public enum ReleaseTimeoutStrategy implements ReleaseTimeoutHandler {
         public void handle(LockInfo lockInfo) {
 
             String errorMsg = String.format("Found Lock(%s) already been released while lock lease time is %d s", lockInfo.getName(), lockInfo.getLeaseTime());
-            throw new KlockTimeoutException(errorMsg);
+            throw new MicroLockInvocationException(errorMsg);
         }
     }
 }

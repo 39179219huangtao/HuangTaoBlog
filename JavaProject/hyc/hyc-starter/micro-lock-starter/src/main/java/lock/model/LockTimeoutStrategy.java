@@ -1,7 +1,7 @@
 package lock.model;
 
+import lock.handler.MicroLockInvocationException;
 import org.aspectj.lang.JoinPoint;
-import lock.handler.KlockTimeoutException;
 import lock.handler.lock.LockTimeoutHandler;
 import lock.lock.Lock;
 
@@ -32,7 +32,7 @@ public enum LockTimeoutStrategy implements LockTimeoutHandler {
         public void handle(LockInfo lockInfo, Lock lock, JoinPoint joinPoint) {
 
             String errorMsg = String.format("Failed to acquire Lock(%s) with timeout(%ds)", lockInfo.getName(), lockInfo.getWaitTime());
-            throw new KlockTimeoutException(errorMsg);
+            throw new MicroLockInvocationException(errorMsg);
         }
     },
 
@@ -55,14 +55,14 @@ public enum LockTimeoutStrategy implements LockTimeoutHandler {
                 if(interval > DEFAULT_MAX_INTERVAL) {
                     String errorMsg = String.format("Failed to acquire Lock(%s) after too many times, this may because dead lock occurs.",
                                                      lockInfo.getName());
-                    throw new KlockTimeoutException(errorMsg);
+                    throw new MicroLockInvocationException(errorMsg);
                 }
 
                 try {
                     TimeUnit.MILLISECONDS.sleep(interval);
                     interval <<= 1;
                 } catch (InterruptedException e) {
-                    throw new KlockTimeoutException("Failed to acquire Lock", e);
+                    throw new MicroLockInvocationException("Failed to acquire Lock", e);
                 }
             }
         }

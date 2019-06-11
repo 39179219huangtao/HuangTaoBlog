@@ -2,6 +2,7 @@ package lock;
 
 import io.netty.channel.nio.NioEventLoopGroup;
 import lock.config.MicroLockConfig;
+import lock.core.MicroLockAspectHandler;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.client.codec.Codec;
@@ -11,7 +12,6 @@ import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import lock.core.BusinessKeyProvider;
-import lock.core.KlockAspectHandler;
 import lock.core.LockInfoProvider;
 import lock.lock.LockFactory;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -27,7 +27,7 @@ import org.springframework.util.ClassUtils;
 @Configuration
 @AutoConfigureAfter(RedisAutoConfiguration.class)
 @EnableConfigurationProperties(MicroLockConfig.class)
-@Import({KlockAspectHandler.class})
+@Import({MicroLockAspectHandler.class})
 public class MicroLlockAutoConfiguration {
 
     @Autowired
