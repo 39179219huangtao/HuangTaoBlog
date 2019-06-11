@@ -5,8 +5,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * Created by kl on 2017/12/29.
  */
-@ConfigurationProperties(prefix = KlockConfig.PREFIX)
-public class KlockConfig {
+@ConfigurationProperties(prefix = MicroLockConfig.PREFIX)
+public class MicroLockConfig {
 
     public static final String PREFIX = "hyc.microlock";
     //redisson

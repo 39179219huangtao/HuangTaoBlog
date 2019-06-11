@@ -1,11 +1,11 @@
 package lock.core;
 
 import lock.annotation.MicroLock;
+import lock.config.MicroLockConfig;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import lock.config.KlockConfig;
 import lock.model.LockInfo;
 import org.aspectj.lang.ProceedingJoinPoint;
 import lock.model.LockType;
@@ -20,7 +20,7 @@ public class LockInfoProvider {
 
 
     @Autowired
-    private KlockConfig klockConfig;
+    private MicroLockConfig microLockConfig;
 
     @Autowired
     private BusinessKeyProvider businessKeyProvider;
@@ -55,11 +55,11 @@ public class LockInfoProvider {
 
     private long getWaitTime(MicroLock lock) {
         return lock.waitTime() == Long.MIN_VALUE ?
-                klockConfig.getWaitTime() : lock.waitTime();
+                microLockConfig.getWaitTime() : lock.waitTime();
     }
 
     private long getLeaseTime(MicroLock lock) {
         return lock.leaseTime() == Long.MIN_VALUE ?
-                klockConfig.getLeaseTime() : lock.leaseTime();
+                microLockConfig.getLeaseTime() : lock.leaseTime();
     }
 }

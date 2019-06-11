@@ -1,6 +1,7 @@
 package lock.core;
 
 import lock.annotation.MicroLock;
+import lock.handler.MicroLockInvocationException;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -11,7 +12,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import lock.handler.KlockInvocationException;
 import lock.lock.Lock;
 import lock.lock.LockFactory;
 import lock.model.LockInfo;
@@ -29,9 +29,9 @@ import java.lang.reflect.Method;
 @Aspect
 @Component
 @Order(0)
-public class KlockAspectHandler {
+public class MicroLockAspectHandler {
 
-    private static final Logger logger = LoggerFactory.getLogger(KlockAspectHandler.class);
+    private static final Logger logger = LoggerFactory.getLogger(MicroLockAspectHandler.class);
 
     @Autowired
     LockFactory lockFactory;
@@ -106,7 +106,7 @@ public class KlockAspectHandler {
         try {
             res = handleMethod.invoke(target, args);
         } catch (IllegalAccessException e) {
-            throw new KlockInvocationException("Fail to invoke custom lock timeout handler: " + lockTimeoutHandler ,e);
+            throw new MicroLockInvocationException("Fail to invoke custom lock timeout handler: " + lockTimeoutHandler ,e);
         } catch (InvocationTargetException e) {
             throw e.getTargetException();
         }
@@ -168,7 +168,7 @@ public class KlockAspectHandler {
         try {
             handleMethod.invoke(target, args);
         } catch (IllegalAccessException e) {
-            throw new KlockInvocationException("Fail to invoke custom release timeout handler: " + releaseTimeoutHandler, e);
+            throw new MicroLockInvocationException("Fail to invoke custom release timeout handler: " + releaseTimeoutHandler, e);
         } catch (InvocationTargetException e) {
             throw e.getTargetException();
         }

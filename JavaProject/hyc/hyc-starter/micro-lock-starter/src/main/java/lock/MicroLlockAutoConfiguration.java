@@ -1,6 +1,7 @@
 package lock;
 
 import io.netty.channel.nio.NioEventLoopGroup;
+import lock.config.MicroLockConfig;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.client.codec.Codec;
@@ -9,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
-import lock.config.KlockConfig;
 import lock.core.BusinessKeyProvider;
 import lock.core.KlockAspectHandler;
 import lock.core.LockInfoProvider;
@@ -26,43 +26,43 @@ import org.springframework.util.ClassUtils;
  */
 @Configuration
 @AutoConfigureAfter(RedisAutoConfiguration.class)
-@EnableConfigurationProperties(KlockConfig.class)
+@EnableConfigurationProperties(MicroLockConfig.class)
 @Import({KlockAspectHandler.class})
-public class KlockAutoConfiguration {
+public class MicroLlockAutoConfiguration {
 
     @Autowired
-    private KlockConfig klockConfig;
+    private MicroLockConfig microLockConfig;
 
     @Bean(destroyMethod = "shutdown")
     @ConditionalOnMissingBean
     RedissonClient redisson() throws Exception {
         Config config = new Config();
-        if(klockConfig.getClusterServer()!=null){
-            config.useClusterServers().setPassword(klockConfig.getPassword())
-                    .addNodeAddress(klockConfig.getClusterServer().getNodeAddresses());
-        }else {
-            config.useSingleServer().setAddress(klockConfig.getAddress())
-                    .setDatabase(klockConfig.getDatabase())
-                    .setPassword(klockConfig.getPassword());
+        if (microLockConfig.getClusterServer() != null) {
+            config.useClusterServers().setPassword(microLockConfig.getPassword())
+                    .addNodeAddress(microLockConfig.getClusterServer().getNodeAddresses());
+        } else {
+            config.useSingleServer().setAddress(microLockConfig.getAddress())
+                    .setDatabase(microLockConfig.getDatabase())
+                    .setPassword(microLockConfig.getPassword());
         }
-        Codec codec=(Codec) ClassUtils.forName(klockConfig.getCodec(),ClassUtils.getDefaultClassLoader()).newInstance();
+        Codec codec = (Codec) ClassUtils.forName(microLockConfig.getCodec(), ClassUtils.getDefaultClassLoader()).newInstance();
         config.setCodec(codec);
         config.setEventLoopGroup(new NioEventLoopGroup());
         return Redisson.create(config);
     }
 
     @Bean
-    public LockInfoProvider lockInfoProvider(){
+    public LockInfoProvider lockInfoProvider() {
         return new LockInfoProvider();
     }
 
     @Bean
-    public BusinessKeyProvider businessKeyProvider(){
+    public BusinessKeyProvider businessKeyProvider() {
         return new BusinessKeyProvider();
     }
 
     @Bean
-    public LockFactory lockFactory(){
+    public LockFactory lockFactory() {
         return new LockFactory();
     }
 }

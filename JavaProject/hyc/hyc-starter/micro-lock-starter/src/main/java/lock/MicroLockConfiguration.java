@@ -1,6 +1,6 @@
 package lock;
 
-import lock.config.KlockConfig;
+import lock.config.MicroLockConfig;
 import lock.core.BusinessKeyProvider;
 import lock.core.KlockAspectHandler;
 import lock.core.LockInfoProvider;
@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import({KlockAspectHandler.class})
-public class KlockConfiguration {
+public class MicroLockConfiguration {
     @Bean
     public LockInfoProvider lockInfoProvider(){
         return new LockInfoProvider();
@@ -31,7 +31,7 @@ public class KlockConfiguration {
         return new LockFactory();
     }
     @Bean
-    public KlockConfig klockConfig(){
-        return new KlockConfig();
+    public MicroLockConfig klockConfig(){
+        return new MicroLockConfig();
     }
 }
