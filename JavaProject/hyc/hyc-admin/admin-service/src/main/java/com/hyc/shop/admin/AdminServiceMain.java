@@ -17,7 +17,6 @@ import java.lang.management.ManagementFactory;
 import java.util.concurrent.CountDownLatch;
 
 @SpringBootApplication
-@ServletComponentScan
 public class AdminServiceMain {
 
 
