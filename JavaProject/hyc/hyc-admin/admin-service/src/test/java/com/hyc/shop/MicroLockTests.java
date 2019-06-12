@@ -17,8 +17,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = KlockTestApplication.class)
-public class KlockTests {
+@SpringBootTest(classes = MicroLockTestApplication.class)
+public class MicroLockTests {
 
     @Autowired
     TestService testService;

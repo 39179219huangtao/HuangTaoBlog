@@ -10,10 +10,10 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  * @date: 2019/6/12
  */
 @SpringBootApplication
-public class KlockTestApplication {
+public class MicroLockTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KlockTestApplication.class, args);
+        SpringApplication.run(MicroLockTestApplication.class, args);
     }
 
 }
