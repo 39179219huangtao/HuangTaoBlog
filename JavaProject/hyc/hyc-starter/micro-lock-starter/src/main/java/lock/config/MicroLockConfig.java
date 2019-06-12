@@ -3,7 +3,9 @@ package lock.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Created by kl on 2017/12/29.
+ * @description:
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 @ConfigurationProperties(prefix = MicroLockConfig.PREFIX)
 public class MicroLockConfig {

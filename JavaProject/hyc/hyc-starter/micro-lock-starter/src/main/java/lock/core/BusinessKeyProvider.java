@@ -15,9 +15,11 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
- * Created by kl on 2018/1/24.
- * Content :获取用户定义业务key
+ * @description: 获取用户定义业务key
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 public class BusinessKeyProvider {
 
@@ -25,10 +27,10 @@ public class BusinessKeyProvider {
 
     private ExpressionParser parser = new SpelExpressionParser();
 
-    public String getKeyName(ProceedingJoinPoint joinPoint, MicroLock klock) {
+    public String getKeyName(ProceedingJoinPoint joinPoint, MicroLock microLock) {
         List<String> keyList = new ArrayList<>();
         Method method = getMethod(joinPoint);
-        List<String> definitionKeys = getSpelDefinitionKey(klock.keys(), method, joinPoint.getArgs());
+        List<String> definitionKeys = getSpelDefinitionKey(microLock.keys(), method, joinPoint.getArgs());
         keyList.addAll(definitionKeys);
 
         return StringUtils.collectionToDelimitedString(keyList,"","-","");

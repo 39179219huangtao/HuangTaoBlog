@@ -1,9 +1,10 @@
 package lock.handler;
 
 /**
- * @author wanglaomo
- * @since 2019/4/16
- **/
+ * @description:
+ * @author: huangtao
+ * @date: 2019/6/12
+ */
 public class MicroLockTimeoutException extends RuntimeException {
 
     public MicroLockTimeoutException() {

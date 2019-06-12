@@ -22,9 +22,11 @@ import org.springframework.util.StringUtils;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+
 /**
- * Created by kl on 2017/12/29.
- * Content :给添加@KLock切面加锁处理
+ * @description: 给添加@microLock切面加锁处理
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 @Aspect
 @Component
@@ -69,17 +71,17 @@ public class MicroLockAspectHandler {
         return joinPoint.proceed();
     }
 
-    @AfterReturning(value = "@annotation(klock)")
-    public void afterReturning(JoinPoint joinPoint, MicroLock klock) throws Throwable {
+    @AfterReturning(value = "@annotation(microLock)")
+    public void afterReturning(JoinPoint joinPoint, MicroLock microLock) throws Throwable {
 
-        releaseLock(klock, joinPoint);
+        releaseLock(microLock, joinPoint);
         cleanUpThreadLocal();
     }
 
-    @AfterThrowing(value = "@annotation(klock)", throwing = "ex")
-    public void afterThrowing (JoinPoint joinPoint, MicroLock klock, Throwable ex) throws Throwable {
+    @AfterThrowing(value = "@annotation(microLock)", throwing = "ex")
+    public void afterThrowing (JoinPoint joinPoint, MicroLock microLock, Throwable ex) throws Throwable {
 
-        releaseLock(klock, joinPoint);
+        releaseLock(microLock, joinPoint);
         cleanUpThreadLocal();
         throw ex;
     }
@@ -117,14 +119,14 @@ public class MicroLockAspectHandler {
     /**
      *  释放锁
      */
-    private void releaseLock(MicroLock klock, JoinPoint joinPoint) throws Throwable {
+    private void releaseLock(MicroLock microLock, JoinPoint joinPoint) throws Throwable {
         LockRes lockRes = currentThreadLockRes.get();
         if (lockRes.getRes()) {
             boolean releaseRes = currentThreadLock.get().release();
             // avoid release lock twice when exception happens below
             lockRes.setRes(false);
             if (!releaseRes) {
-                handleReleaseTimeout(klock, lockRes.getLockInfo(), joinPoint);
+                handleReleaseTimeout(microLock, lockRes.getLockInfo(), joinPoint);
             }
         }
     }
@@ -133,18 +135,18 @@ public class MicroLockAspectHandler {
     /**
      *  处理释放锁时已超时
      */
-    private void handleReleaseTimeout(MicroLock klock, LockInfo lockInfo, JoinPoint joinPoint) throws Throwable {
+    private void handleReleaseTimeout(MicroLock microLock, LockInfo lockInfo, JoinPoint joinPoint) throws Throwable {
 
         if(logger.isWarnEnabled()) {
             logger.warn("Timeout while release Lock({})", lockInfo.getName());
         }
 
-        if(!StringUtils.isEmpty(klock.customReleaseTimeoutStrategy())) {
+        if(!StringUtils.isEmpty(microLock.customReleaseTimeoutStrategy())) {
 
-            handleCustomReleaseTimeout(klock.customReleaseTimeoutStrategy(), joinPoint);
+            handleCustomReleaseTimeout(microLock.customReleaseTimeoutStrategy(), joinPoint);
 
         } else {
-            klock.releaseTimeoutStrategy().handle(lockInfo);
+            microLock.releaseTimeoutStrategy().handle(lockInfo);
         }
 
     }

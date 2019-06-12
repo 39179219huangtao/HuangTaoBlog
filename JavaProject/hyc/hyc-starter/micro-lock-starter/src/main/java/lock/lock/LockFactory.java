@@ -7,8 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import lock.model.LockInfo;
 
 /**
- * Created by kl on 2017/12/29.
- * Content :
+ * @description:
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 public class LockFactory  {
     Logger logger= LoggerFactory.getLogger(getClass());

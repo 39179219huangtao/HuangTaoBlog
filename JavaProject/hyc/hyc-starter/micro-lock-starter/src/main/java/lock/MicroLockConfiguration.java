@@ -10,8 +10,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * Created by kl on 2017/12/29.
- * Content :适用于内部低版本spring mvc项目配置,redisson外化配置
+ * @description:适用于内部低版本spring mvc项目配置,redisson外化配置
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 @Configuration
 @Import({MicroLockAspectHandler.class})
@@ -31,7 +32,7 @@ public class MicroLockConfiguration {
         return new LockFactory();
     }
     @Bean
-    public MicroLockConfig klockConfig(){
+    public MicroLockConfig microLockConfig(){
         return new MicroLockConfig();
     }
 }

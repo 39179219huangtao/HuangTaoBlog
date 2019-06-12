@@ -9,9 +9,10 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * @author wanglaomo
- * @since 2019/4/15
- **/
+ * @description:
+ * @author: huangtao
+ * @date: 2019/6/12
+ */
 public enum LockTimeoutStrategy implements LockTimeoutHandler {
 
     /**

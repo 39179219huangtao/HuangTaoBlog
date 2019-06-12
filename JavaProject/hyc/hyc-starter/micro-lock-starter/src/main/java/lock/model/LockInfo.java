@@ -1,8 +1,10 @@
 package lock.model;
 
+
 /**
- * Created by kl on 2017/12/29.
- * Content :锁基本信息
+ * @description: 锁基本信息
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 public class LockInfo {
 

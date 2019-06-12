@@ -8,7 +8,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by kl on 2017/12/29.
+ * @description:
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 public class ReadLock implements Lock {
 

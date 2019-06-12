@@ -4,9 +4,10 @@ import lock.handler.MicroLockInvocationException;
 import lock.handler.release.ReleaseTimeoutHandler;
 
 /**
- * @author wanglaomo
- * @since 2019/4/15
- **/
+ * @description:
+ * @author: huangtao
+ * @date: 2019/6/12
+ */
 public enum ReleaseTimeoutStrategy implements ReleaseTimeoutHandler {
 
     /**

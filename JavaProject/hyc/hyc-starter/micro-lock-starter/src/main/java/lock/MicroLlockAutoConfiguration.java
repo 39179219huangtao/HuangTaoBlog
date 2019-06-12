@@ -21,8 +21,9 @@ import org.springframework.context.annotation.Import;
 import org.springframework.util.ClassUtils;
 
 /**
- * Created by kl on 2017/12/29.
- * Content :klock自动装配
+ * @description: microLock自动装配
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 @Configuration
 @AutoConfigureAfter(RedisAutoConfiguration.class)

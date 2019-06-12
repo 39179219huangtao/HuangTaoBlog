@@ -10,8 +10,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by kl on 2017/12/29.
- * Content :加锁注解
+ * @description:
+ * @author: huangtao
+ * @date: 2019/6/12
  */
 @Target(value = {ElementType.METHOD})
 @Retention(value = RetentionPolicy.RUNTIME)
