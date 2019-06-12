@@ -48,7 +48,7 @@ public @interface MicroLock {
      * 加锁超时的处理策略
      * @return lockTimeoutStrategy
      */
-     LockTimeoutStrategy lockTimeoutStrategy() default LockTimeoutStrategy.NO_OPERATION;
+     LockTimeoutStrategy lockTimeoutStrategy() default LockTimeoutStrategy.FAIL_FAST;
 
     /**
      * 自定义加锁超时的处理策略

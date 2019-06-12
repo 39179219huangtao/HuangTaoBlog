@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestService {
 
-    @MicroLock(waitTime = Long.MAX_VALUE, leaseTime = 60, keys = {"#param"})
+    @MicroLock(waitTime = 2, leaseTime = 100, keys = {"#param"})
     public String getValue(String param) throws Exception {
         System.out.println("进入方法  获取到了锁");
         //  if ("sleep".equals(param)) {//线程休眠或者断点阻塞，达到一直占用锁的测试效果
