@@ -15,7 +15,7 @@ public class TestService {
     public String getValue(String param) throws Exception {
         System.out.println("进入方法  获取到了锁");
         //  if ("sleep".equals(param)) {//线程休眠或者断点阻塞，达到一直占用锁的测试效果
-        Thread.sleep(1000 * 60);
+        Thread.sleep(1000 * 10);
         //}
         return "success";
     }

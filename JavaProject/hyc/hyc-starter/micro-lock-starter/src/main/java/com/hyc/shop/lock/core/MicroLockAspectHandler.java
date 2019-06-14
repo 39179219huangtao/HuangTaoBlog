@@ -5,10 +5,7 @@ import com.hyc.shop.lock.handler.MicroLockInvocationException;
 import com.hyc.shop.lock.lock.Lock;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,6 +43,7 @@ public class MicroLockAspectHandler {
 
     @Around(value = "@annotation(microLock)")
     public Object around(ProceedingJoinPoint joinPoint, MicroLock microLock) throws Throwable {
+        System.out.println("around  enter");
         LockInfo lockInfo = lockInfoProvider.get(joinPoint,microLock);
         currentThreadLockRes.set(new LockRes(lockInfo, false));
         Lock lock = lockFactory.getLock(lockInfo);
@@ -67,9 +65,15 @@ public class MicroLockAspectHandler {
 
         currentThreadLock.set(lock);
         currentThreadLockRes.get().setRes(true);
-
-        return joinPoint.proceed();
+        final Object proceed = joinPoint.proceed();
+        System.out.println("around end");
+        return proceed;
     }
+    @Before(value = "@annotation(microLock)")
+    public void before(JoinPoint joinPoint, MicroLock microLock) throws Throwable {
+        System.out.println("before");
+    }
+
 
     @AfterReturning(value = "@annotation(microLock)")
     public void afterReturning(JoinPoint joinPoint, MicroLock microLock) throws Throwable {
