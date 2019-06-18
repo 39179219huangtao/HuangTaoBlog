@@ -1,21 +1,16 @@
 /*
  * Copyright © 2016 北京易酒批电子商务有限公司. All rights reserved.
  */
-package com.hyc.shop.admin;
+package com.hyc.shop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.Import;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
-import java.util.concurrent.CountDownLatch;
 
 @SpringBootApplication
 @EnableTransactionManagement

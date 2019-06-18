@@ -1,5 +1,8 @@
 package com.hyc.shop.admin.listener;
 
+import com.hyc.shop.lock.annotation.MicroLock;
+import org.springframework.beans.factory.annotation.Value;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,11 +14,20 @@ import java.util.HashMap;
  */
 
 public class app {
-    public static void main(String[] args) {
-        final ArrayList<String> strings = new ArrayList<>();
-        final HashMap<String, String> stringStringHashMap = new HashMap<>();
-        strings.stream().forEach(e->{
-            stringStringHashMap.put(e,e);
-        });
+    @Value("${spring.rabbitmq.host}")
+    private String host;
+
+    @MicroLock(waitTime = 2, leaseTime = 100,customLockTimeoutStrategy="testTimeOut", keys = {"#param"})
+    public String getValue(String param) throws Exception {
+        System.out.println("进入方法  获取到了锁");
+        //  if ("sleep".equals(param)) {//线程休眠或者断点阻塞，达到一直占用锁的测试效果
+        Thread.sleep(1000 * 10);
+        //}
+        return "success";
+    }
+
+    private String testTimeOut(String param) {
+
+        throw new IllegalStateException("customReleaseTimeout");
     }
 }
