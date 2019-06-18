@@ -1,5 +1,8 @@
 package com.hyc.shop.admin.listener;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * @program hyc
  * @description:
@@ -8,4 +11,11 @@ package com.hyc.shop.admin.listener;
  */
 
 public class app {
+    public static void main(String[] args) {
+        final ArrayList<String> strings = new ArrayList<>();
+        final HashMap<String, String> stringStringHashMap = new HashMap<>();
+        strings.stream().forEach(e->{
+            stringStringHashMap.put(e,e);
+        });
+    }
 }

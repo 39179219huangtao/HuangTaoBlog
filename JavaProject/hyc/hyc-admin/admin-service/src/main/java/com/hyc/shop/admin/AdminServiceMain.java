@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Import;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -17,6 +18,7 @@ import java.lang.management.ManagementFactory;
 import java.util.concurrent.CountDownLatch;
 
 @SpringBootApplication
+@EnableTransactionManagement
 public class AdminServiceMain {
 
 
@@ -27,7 +29,7 @@ public class AdminServiceMain {
         writer.write(name);
         writer.close();
 
-        System.out.println("=================>taurus-admin-service is starting");
+        System.out.println("=================>AdminServiceMain is starting");
         SpringApplication.run(AdminServiceMain.class);
     }
 
