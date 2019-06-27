@@ -37,7 +37,7 @@ public class MyBatisConfig {
         //添加XML目录
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            bean.setMapperLocations(resolver.getResources("classpath:com/hszk/**/*.xml"));
+            bean.setMapperLocations(resolver.getResources("classpath:com/hyc/**/*.xml"));
             bean.setConfigLocation(resolver.getResource("classpath:config/configuration.xml"));
             return bean.getObject();
         } catch (Exception e) {
