@@ -8,12 +8,12 @@ import java.util.List;
  *
  * @author huangtao
  */
-public interface IInventoryAdjustService {
+public interface IHelloService {
 
     /**
      * 调整仓库库存.
      */
-    void repairWarehouseInventoy(Long productSku, Integer warehouseId, Integer changeCount);
+    void hello();
 
 
 
