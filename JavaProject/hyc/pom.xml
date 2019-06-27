@@ -33,6 +33,7 @@
         <dependency>
             <groupId>com.alibaba.spring.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.0.0</version>
         </dependency>
 
         <!-- Spring Boot Test 依赖 -->
@@ -74,6 +75,13 @@
             <version>1.0.16</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.31</version>
+        </dependency>
+
         <!-- Swagger -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -100,7 +108,9 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
+            <version>1.9.3</version>
         </dependency>
+
 
         <!-- Junit -->
         <dependency>
