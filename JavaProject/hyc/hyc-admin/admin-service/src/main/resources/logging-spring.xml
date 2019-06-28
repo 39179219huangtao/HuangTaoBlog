@@ -3,7 +3,7 @@
 	<!-- 文件输出格式 -->  
     <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n" /> 
 	<!-- 日志打印路径 -->
-	<property name="DEV_HOME" value="/home/log/logs" />
+	<property name="DEV_HOME" value="/Users/icsoc/work/log" />
 	
 	<!-- 控制台日志打印 -->
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -51,14 +51,14 @@
         </layout>
     </appender>
 
-	<logger name="com.hszk.taurus.admin" level="info" additivity="false">
-		<appender-ref ref="FILE-ADMIN" />
+	<logger name="com.hyc.shop.admin" level="info" additivity="false">
+	<!--	<appender-ref ref="FILE-ADMIN" />-->
 		<appender-ref ref="STDOUT" />
-		<appender-ref ref="ERROR_FILE" />
+	<!--	<appender-ref ref="ERROR_FILE" />-->
 	</logger>
 
 	<root level="info">
 		<appender-ref ref="STDOUT" />
-		<appender-ref ref="ERROR_FILE" />
+	<!--	<appender-ref ref="ERROR_FILE" />-->
 	</root>
 </configuration>
