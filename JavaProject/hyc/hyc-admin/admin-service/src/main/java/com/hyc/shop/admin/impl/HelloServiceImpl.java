@@ -2,6 +2,7 @@ package com.hyc.shop.admin.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.hyc.shop.admin.service.IHelloService;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import sun.tools.tree.ThisExpression;
 
 import java.io.IOException;
@@ -14,7 +15,8 @@ import org.springframework.stereotype.Component;
  * @author: huangtao
  * @create: 2019/05/16 17:22
  */
-@Service(version = "1.0.0")
+@org.springframework.stereotype.Service("userService")
+@Service
 public class HelloServiceImpl implements IHelloService {
 
 
