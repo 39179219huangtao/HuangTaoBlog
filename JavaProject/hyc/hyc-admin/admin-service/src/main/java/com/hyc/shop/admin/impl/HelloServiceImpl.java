@@ -15,7 +15,8 @@ import org.springframework.stereotype.Component;
  * @author: huangtao
  * @create: 2019/05/16 17:22
  */
-@org.springframework.stereotype.Service("userService")
+
+@Component
 @Service
 public class HelloServiceImpl implements IHelloService {
 
