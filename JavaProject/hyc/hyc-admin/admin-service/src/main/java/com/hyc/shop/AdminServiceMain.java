@@ -3,6 +3,7 @@
  */
 package com.hyc.shop;
 
+import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -14,7 +15,7 @@ import java.lang.management.ManagementFactory;
 
 @SpringBootApplication
 @EnableTransactionManagement
-//@EnableDubboConfiguration
+@EnableDubboConfiguration
 public class AdminServiceMain {
 
 

@@ -1,5 +1,6 @@
 package com.hyc.shop.admin.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.hyc.shop.admin.service.IHelloService;
 import sun.tools.tree.ThisExpression;
 
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @author: huangtao
  * @create: 2019/05/16 17:22
  */
-//@Service(version = "1.0.0")
+@Service(version = "1.0.0")
 public class HelloServiceImpl implements IHelloService {
 
 
