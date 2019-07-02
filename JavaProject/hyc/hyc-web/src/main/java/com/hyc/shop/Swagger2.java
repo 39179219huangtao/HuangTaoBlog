@@ -18,14 +18,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author qirong
- * @date 2018/7/26
+ * @description:
+ * @author: huangtao
+ * @date: 2019/7/2
  */
 @Configuration(value = "Swagger2")
 @EnableSwagger2
 public class Swagger2 {
 
-    //swagger2的配置文件，这里可以配置swagger2的一些基本的内容，比如扫描的包等等
+    /**
+     * @description: swagger2的配置文件，这里可以配置swagger2的一些基本的内容，比如扫描的包等等
+     * @param:
+     * @return:
+     * @author: huangtao
+     * @date: 2019/7/2
+     */
     @Bean(name = "restApi")
     public Docket createRestApi() {
 
@@ -39,7 +46,13 @@ public class Swagger2 {
                 .build();
     }
 
-    //构建 api文档的详细信息函数,注意这里的注解引用的是哪个
+    /**
+     * @description: api文档的详细信息函数,注意这里的注解引用的是哪个
+     * @param:
+     * @return:
+     * @author: huangtao
+     * @date: 2019/7/2
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
