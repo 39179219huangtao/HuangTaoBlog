@@ -43,9 +43,9 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("Spring Boot 测试使用 Swagger2 构建 RESTful API")
+                .title("hyc商城接口api文档")
                 //创建人
-                .contact(new Contact("乐聚", "http://weibo.com/p/1005051924942345", ""))
+                .contact(new Contact("黄涛", "", ""))
                 //版本号
                 .version("1.0")
                 //描述
