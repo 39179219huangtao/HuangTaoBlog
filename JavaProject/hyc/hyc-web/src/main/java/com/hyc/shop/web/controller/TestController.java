@@ -20,7 +20,7 @@ public class TestController {
     private IHelloService helloService;
 
     @GetMapping("/test")
-    @ApiOperation(value = "测试Grpc调用", notes = "测试Grpc调用")
+    @ApiOperation(value = "测试dubbo调用", notes = "测试dubbo调用")
     public String test() {
         helloService.hello();
 
