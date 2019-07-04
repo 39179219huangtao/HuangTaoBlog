@@ -3,18 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>hyc</artifactId>
+        <artifactId>hyc-product</artifactId>
         <groupId>com.hyc.shop</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hyc-product</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>product-api</module>
-        <module>product-service</module>
-    </modules>
+    <artifactId>product-api</artifactId>
+
+    <dependencies>
 
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 </project>
