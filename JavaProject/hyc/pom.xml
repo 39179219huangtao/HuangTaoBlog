@@ -25,12 +25,10 @@
         <pagehelper.version>4.1.0</pagehelper.version>
         <swaggeer.version>2.9.2</swaggeer.version>
         <org.projectlombok.version>1.16.14</org.projectlombok.version>
-
-
         <mysql-connector-java.version>5.1.18</mysql-connector-java.version>
-
         <commons-pool2.version>2.1</commons-pool2.version>
-
+        <hibernate-validator.version>6.0.16.Final</hibernate-validator.version>
+        <mybatis-plus.version>3.1.1</mybatis-plus.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -113,7 +111,11 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swaggeer.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
+            </dependency>
 
             <!-- jdbc driver -->
             <dependency>
@@ -172,6 +174,30 @@
 
                 </exclusions>
             </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-core</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-jdbc</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
             <!-- Junit -->
             <dependency>
                 <groupId>junit</groupId>

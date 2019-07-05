@@ -14,6 +14,7 @@
     <modules>
         <module>product-api</module>
         <module>product-service</module>
+        <module>product-service-application</module>
     </modules>
 
 
