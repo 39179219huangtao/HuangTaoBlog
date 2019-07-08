@@ -38,7 +38,11 @@
         </dependency>
         <!-- Spring Boot Dubbo 依赖 -->
         <dependency>
-            <groupId>com.alibaba.spring.boot</groupId>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
         </dependency>
         <!-- Spring Boot Test 依赖 -->

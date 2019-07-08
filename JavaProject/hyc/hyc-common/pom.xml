@@ -13,7 +13,11 @@
 
 <dependencies>
 
-
+    <!-- RPC 相关  -->
+    <dependency>
+        <groupId>org.apache.dubbo</groupId>
+        <artifactId>dubbo</artifactId>
+    </dependency>
     <!-- Web 相关 -->
     <dependency>
         <groupId>javax.servlet</groupId>

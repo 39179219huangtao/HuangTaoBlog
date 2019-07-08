@@ -1,9 +1,9 @@
 package com.hyc.shop.product.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.hyc.shop.product.service.IHelloService;
 import com.hyc.shop.product.service.IHelloService;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @program hyc
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
  * @create: 2019/05/16 17:22
  */
 
-@Component
 @Service
+@org.apache.dubbo.config.annotation.Service(validation = "true", version = "${dubbo.provider.ProductAttrService.version}")
 public class HelloServiceImpl implements IHelloService {
 
 

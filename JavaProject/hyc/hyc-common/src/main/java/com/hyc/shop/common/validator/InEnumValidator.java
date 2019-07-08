@@ -1,6 +1,6 @@
 package com.hyc.shop.common.validator;
 
-import cn.iocoder.common.framework.core.IntArrayValuable;
+import com.hyc.shop.common.core.IntArrayValuable;;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

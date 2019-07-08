@@ -1,7 +1,7 @@
 package com.hyc.shop.common.util;
 
-import cn.iocoder.common.framework.exception.ServiceException;
-import cn.iocoder.common.framework.vo.CommonResult;
+import com.hyc.shop.common.exception.ServiceException;
+import com.hyc.shop.common.vo.CommonResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
