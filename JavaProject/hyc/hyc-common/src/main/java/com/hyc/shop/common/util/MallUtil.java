@@ -1,7 +1,7 @@
 package com.hyc.shop.common.util;
 
-import cn.iocoder.common.framework.constant.MallConstants;
-import cn.iocoder.common.framework.vo.CommonResult;
+import com.hyc.shop.common.constant.MallConstants;
+import com.hyc.shop.common.vo.CommonResult;
 import org.apache.skywalking.apm.toolkit.trace.TraceContext;
 
 import javax.servlet.ServletRequest;

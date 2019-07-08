@@ -1,4 +1,4 @@
-package com.hyc.shop.common;
+package com.hyc.shop.common.core;
 
 /**
  * 可生成 Int 数组的接口

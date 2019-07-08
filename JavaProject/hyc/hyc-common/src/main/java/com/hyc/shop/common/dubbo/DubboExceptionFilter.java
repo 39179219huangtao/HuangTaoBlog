@@ -1,9 +1,9 @@
 //package com.hyc.shop.common.dubbo;
 //
 //import cn.iocoder.common.framework.exception.ServiceException;
-//import com.alibaba.dubbo.common.Constants;
-//import com.alibaba.dubbo.common.extension.Activate;
-//import com.alibaba.dubbo.common.logger.Logger;
+//import org.apache.dubbo.common.Constants;
+//import org.apache.dubbo.common.extension.Activate;
+//import org.apache.dubbo.common.logger.Logger;
 //import org.apache.dubbo.common.logger.LoggerFactory;
 //import org.apache.dubbo.common.utils.ReflectUtils;
 //import org.apache.dubbo.common.utils.StringUtils;

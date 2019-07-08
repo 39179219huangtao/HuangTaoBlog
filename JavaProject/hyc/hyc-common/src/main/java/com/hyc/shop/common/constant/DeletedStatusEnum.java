@@ -1,6 +1,6 @@
 package com.hyc.shop.common.constant;
 
-import cn.iocoder.common.framework.dataobject.DeletableDO;
+import com.hyc.shop.common.dataobject.DeletableDO;
 
 /**
  * {@link DeletableDO#getDeleted()} delete 状态

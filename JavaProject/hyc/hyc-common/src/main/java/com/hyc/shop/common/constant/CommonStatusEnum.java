@@ -1,6 +1,6 @@
 package com.hyc.shop.common.constant;
 
-import cn.iocoder.common.framework.core.IntArrayValuable;
+import com.hyc.shop.common.core.IntArrayValuable;
 
 import java.util.Arrays;
 

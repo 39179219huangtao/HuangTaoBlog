@@ -1,6 +1,6 @@
 package com.hyc.shop.common.util;
 
-import cn.iocoder.common.framework.exception.ServiceException;
+import com.hyc.shop.common.exception.ServiceException;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import javax.validation.ConstraintViolationException;
