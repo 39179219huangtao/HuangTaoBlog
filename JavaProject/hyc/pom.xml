@@ -299,6 +299,7 @@
         <module>hyc-mobile</module>
         <module>hyc-product</module>
         <module>hyc-starter</module>
+        <module>system</module>
     </modules>
 
     <build>
