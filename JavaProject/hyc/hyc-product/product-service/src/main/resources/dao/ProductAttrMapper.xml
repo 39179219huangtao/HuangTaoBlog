@@ -13,7 +13,7 @@
         <!--WHERE deleted = 0-->
     <!--</select>-->
 
-    <select id="selectById" parameterType="Integer" resultType="ProductAttrDO">
+    <select id="selectById" parameterType="Integer" resultType="com.hyc.shop.product.domain.dataobject.ProductAttrDO">
         SELECT
             <include refid="FIELDS" />
         FROM product_attr
@@ -21,7 +21,7 @@
         AND deleted = 0
     </select>
 
-    <select id="selectByName" parameterType="String" resultType="ProductAttrDO">
+    <select id="selectByName" parameterType="String" resultType="com.hyc.shop.product.domain.dataobject.ProductAttrDO">
         SELECT
             <include refid="FIELDS" />
         FROM product_attr
@@ -30,7 +30,7 @@
         LIMIT 1
     </select>
 
-    <insert id="insert" parameterType="ProductAttrDO" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+    <insert id="insert" parameterType="com.hyc.shop.product.domain.dataobject.ProductAttrDO" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         INSERT INTO product_attr (
           name, status, create_time, deleted
         ) VALUES (
@@ -38,7 +38,7 @@
         )
     </insert>
 
-    <update id="update" parameterType="ProductAttrDO">
+    <update id="update" parameterType="com.hyc.shop.product.domain.dataobject.ProductAttrDO">
         UPDATE product_attr
         <set>
             <if test="name != null">
