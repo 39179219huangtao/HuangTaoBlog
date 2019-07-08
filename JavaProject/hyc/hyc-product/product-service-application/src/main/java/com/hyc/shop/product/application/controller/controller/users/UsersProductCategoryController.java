@@ -1,10 +1,11 @@
 package com.hyc.shop.product.application.controller.controller.users;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.product.api.ProductCategoryService;
-import cn.iocoder.mall.product.api.bo.ProductCategoryBO;
-import cn.iocoder.mall.product.application.convert.ProductCategoryConvert;
-import cn.iocoder.mall.product.application.vo.users.UsersProductCategoryVO;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.product.application.controller.convert.ProductCategoryConvert;
+import com.hyc.shop.product.application.controller.vo.users.UsersProductCategoryVO;
+import com.hyc.shop.product.bo.ProductCategoryBO;
+import com.hyc.shop.product.service.ProductCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

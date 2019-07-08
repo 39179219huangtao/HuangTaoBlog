@@ -1,7 +1,8 @@
 package com.hyc.shop.product.application.controller.controller.users;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.product.api.ProductSpuCollectionService;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.product.service.ProductSpuCollectionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.dubbo.config.annotation.Reference;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static cn.iocoder.common.framework.vo.CommonResult.success;
+import static com.hyc.shop.common.vo.CommonResult.success;
 
 /**
  * 商品收藏接口
@@ -30,7 +31,7 @@ public class UsersProductSpuCollectionController {
     @ApiOperation("商品收藏")
 //    @RequiresLogin
     public CommonResult<Boolean> productSpuCollection(@PathVariable("spuId") Integer spuId,
-            @PathVariable("hasCollectionType") Integer hasCollectionType) {
+                                                      @PathVariable("hasCollectionType") Integer hasCollectionType) {
 //        final Integer userId = UserSecurityContextHolder.getContext().getUserId();
 
         return success(productSpuCollectionService.productSpuCollection(spuId, hasCollectionType,140));

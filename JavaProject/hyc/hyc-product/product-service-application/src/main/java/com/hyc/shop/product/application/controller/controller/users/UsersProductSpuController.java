@@ -1,12 +1,13 @@
 package com.hyc.shop.product.application.controller.controller.users;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.product.api.ProductSpuService;
-import cn.iocoder.mall.product.api.bo.ProductSpuPageBO;
-import cn.iocoder.mall.product.api.dto.ProductSpuPageDTO;
-import cn.iocoder.mall.product.application.convert.ProductSpuConvert;
-import cn.iocoder.mall.product.application.vo.users.UsersProductSpuDetailVO;
-import cn.iocoder.mall.product.application.vo.users.UsersProductSpuPageVO;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.product.application.controller.convert.ProductSpuConvert;
+import com.hyc.shop.product.application.controller.vo.users.UsersProductSpuDetailVO;
+import com.hyc.shop.product.application.controller.vo.users.UsersProductSpuPageVO;
+import com.hyc.shop.product.bo.ProductSpuPageBO;
+import com.hyc.shop.product.dto.ProductSpuPageDTO;
+import com.hyc.shop.product.service.ProductSpuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import static cn.iocoder.common.framework.vo.CommonResult.success;
+import static com.hyc.shop.common.vo.CommonResult.success;
 
 @RestController
 @RequestMapping("users/spu")
