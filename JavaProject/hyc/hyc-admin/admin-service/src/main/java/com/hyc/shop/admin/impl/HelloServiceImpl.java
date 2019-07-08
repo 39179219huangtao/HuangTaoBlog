@@ -1,8 +1,8 @@
 package com.hyc.shop.admin.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.hyc.shop.admin.service.IHelloService;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.stereotype.Service;
 import sun.tools.tree.ThisExpression;
 
 import java.io.IOException;
@@ -16,8 +16,8 @@ import org.springframework.stereotype.Component;
  * @create: 2019/05/16 17:22
  */
 
-@Component
 @Service
+@org.apache.dubbo.config.annotation.Service(validation = "true", version = "${dubbo.provider.ProductAttrService.version}")
 public class HelloServiceImpl implements IHelloService {
 
 

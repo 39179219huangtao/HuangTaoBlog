@@ -1,22 +1,19 @@
 /*
  * Copyright © 2016 北京易酒批电子商务有限公司. All rights reserved.
  */
-package com.hyc.shop;
+package com.hyc.shop.admin.application;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 
-@SpringBootApplication
-@EnableTransactionManagement
-@EnableDubboConfiguration
+@SpringBootApplication(scanBasePackages = {"com.hyc.shop.admin"})
+@EnableAsync(proxyTargetClass = true)
 public class AdminServiceMain {
 
 

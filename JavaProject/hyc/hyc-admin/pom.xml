@@ -14,7 +14,7 @@
     <modules>
         <module>admin-api</module>
         <module>admin-service</module>
+        <module>admin-service-application</module>
     </modules>
-
 
 </project>
