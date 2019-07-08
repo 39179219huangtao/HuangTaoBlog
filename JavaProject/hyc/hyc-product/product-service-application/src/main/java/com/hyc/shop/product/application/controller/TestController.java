@@ -16,15 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
-//    @Reference(validation = "true", version = "${dubbo.provider.ProductAttrService.version}")
-//    private IHelloService helloService;
-//
-//    @GetMapping("/test")
-//    @ApiOperation(value = "测试dubbo调用", notes = "测试dubbo调用")
-//    public String test() {
-//        helloService.hello();
-//
-//        return "";
-//    }
+    @Reference(validation = "true", version = "${dubbo.provider.ProductAttrService.version}")
+    private IHelloService helloService;
+
+    @GetMapping("/test")
+    @ApiOperation(value = "测试dubbo调用", notes = "测试dubbo调用")
+    public String test() {
+        helloService.hello();
+
+        return "";
+    }
 
 }
