@@ -24,7 +24,6 @@ import java.util.List;
 public class UsersProductCategoryController {
 
     @Reference(validation = "true", version = "${dubbo.provider.ProductCategoryService.version}")
-    @Autowired
     private ProductCategoryService productCategoryService;
 
     @GetMapping("/list")
