@@ -21,7 +21,7 @@
         <dubbo.version>2.7.1</dubbo.version>
         <spring-jdbc>5.1.5.RELEASE</spring-jdbc>
         <mybatis.version>3.5.1</mybatis.version>
-        <mybatis-spring>1.2.4</mybatis-spring>
+        <mybatis-spring>2.0.1</mybatis-spring>
         <pagehelper.version>4.1.0</pagehelper.version>
         <swagger.version>1.5.21</swagger.version>
 

@@ -16,12 +16,12 @@ import java.util.Properties;
 @Configuration
 public class MyBatisConfig {
 
-	
+
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-      
+
         //分页插件
         PageHelper pageHelper = new PageHelper();
         Properties properties = new Properties();
@@ -39,22 +39,18 @@ public class MyBatisConfig {
         try {
             bean.setMapperLocations(resolver.getResources("classpath:dao/*.xml"));
             bean.setConfigLocation(resolver.getResource("classpath:config/configuration.xml"));
+            bean.setTypeAliasesPackage("com.hyc.shop.product.domain.dataobject");
             return bean.getObject();
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
- 
- 	@Bean(name="sqlSession")
+
+    @Bean(name = "sqlSession")
     public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
- 	
- 
- 	
- 	
-	
- 	
+
 
 }
