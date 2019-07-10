@@ -9,7 +9,7 @@ public class MyBatisMapperScannerConfig {
 	@Bean
     public MapperScannerConfigurer mapperScannerConfigurer() {
 		MapperScannerConfigurer config= new MapperScannerConfigurer();
-		config.setBasePackage("com.hyc.shop.admin.dao");
+		config.setBasePackage("com.hyc.shop.admin.domain.dao");
 		return config;
     }
 }

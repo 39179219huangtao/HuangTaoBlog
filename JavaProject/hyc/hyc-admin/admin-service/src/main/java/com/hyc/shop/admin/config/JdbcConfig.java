@@ -21,14 +21,14 @@ public class JdbcConfig implements  TransactionManagementConfigurer {
     public DataSource dataSource() {
 		return new DruidDataSource();
     }
-	
-	
+
+
 	@Override
 	public PlatformTransactionManager annotationDrivenTransactionManager() {
-		
+
 		return new DataSourceTransactionManager(dataSource());
 	}
-	
-	
- 	
+
+
+
 }
