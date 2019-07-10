@@ -1,6 +1,6 @@
 package com.hyc.shop.system.application.admins;
 
-import cn.iocoder.common.framework.vo.CommonResult;
+import com.hyc.shop.common.vo.CommonResult;
 import com.qiniu.util.Auth;
 import io.swagger.annotations.Api;
 import org.slf4j.Logger;

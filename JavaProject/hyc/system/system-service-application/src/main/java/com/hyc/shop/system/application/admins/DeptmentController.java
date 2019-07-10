@@ -14,6 +14,7 @@ import com.hyc.shop.system.service.DeptmentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ import static com.hyc.shop.common.vo.CommonResult.success;
 @Api("部门模块")
 public class DeptmentController {
 
-    @Autowired
+    @Reference(validation = "true", version = "${dubbo.provider.DeptmentService.version}")
     private DeptmentService deptmentService;
 
     @GetMapping("tree/page")

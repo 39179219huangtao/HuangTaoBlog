@@ -1,18 +1,20 @@
 package com.hyc.shop.system.application.admins;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.admin.api.ResourceService;
-import cn.iocoder.mall.admin.api.bo.resource.ResourceBO;
-import cn.iocoder.mall.admin.api.constant.ResourceConstants;
-import cn.iocoder.mall.admin.api.dto.resource.ResourceAddDTO;
-import cn.iocoder.mall.admin.api.dto.resource.ResourceUpdateDTO;
-import cn.iocoder.mall.admin.application.convert.ResourceConvert;
-import cn.iocoder.mall.admin.application.vo.resource.ResourceTreeNodeVO;
-import cn.iocoder.mall.admin.sdk.context.AdminSecurityContextHolder;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.system.application.convert.ResourceConvert;
+import com.hyc.shop.system.application.vo.resource.ResourceTreeNodeVO;
+import com.hyc.shop.system.bo.resource.ResourceBO;
+import com.hyc.shop.system.constant.ResourceConstants;
+import com.hyc.shop.system.dto.resource.ResourceAddDTO;
+import com.hyc.shop.system.dto.resource.ResourceUpdateDTO;
+import com.hyc.shop.system.sdk.context.AdminSecurityContextHolder;
+import com.hyc.shop.system.service.ResourceService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -20,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static cn.iocoder.common.framework.vo.CommonResult.success;
+import static com.hyc.shop.common.vo.CommonResult.success;
 
 @RestController
 @RequestMapping("admins/resource")

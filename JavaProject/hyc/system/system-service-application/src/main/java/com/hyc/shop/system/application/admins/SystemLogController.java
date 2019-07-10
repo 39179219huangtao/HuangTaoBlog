@@ -1,11 +1,12 @@
 package com.hyc.shop.system.application.admins;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.admin.api.SystemLogService;
-import cn.iocoder.mall.admin.api.bo.systemlog.AccessLogPageBO;
-import cn.iocoder.mall.admin.api.dto.systemlog.AccessLogPageDTO;
-import cn.iocoder.mall.admin.application.convert.AccessLogConvert;
-import cn.iocoder.mall.admin.application.vo.log.AccessLogPageVo;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.system.application.convert.AccessLogConvert;
+import com.hyc.shop.system.application.vo.log.AccessLogPageVo;
+import com.hyc.shop.system.bo.systemlog.AccessLogPageBO;
+import com.hyc.shop.system.dto.systemlog.AccessLogPageDTO;
+import com.hyc.shop.system.service.SystemLogService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import static cn.iocoder.common.framework.vo.CommonResult.success;
+import static com.hyc.shop.common.vo.CommonResult.success;
 
 /**
  * @author:ycjx

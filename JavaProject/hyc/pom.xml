@@ -24,7 +24,6 @@
         <mybatis-spring>2.0.1</mybatis-spring>
         <pagehelper.version>4.1.0</pagehelper.version>
         <swagger.version>1.5.21</swagger.version>
-
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
         <org.projectlombok.version>1.16.14</org.projectlombok.version>
         <mysql-connector-java.version>5.1.18</mysql-connector-java.version>
@@ -133,9 +132,20 @@
                 <version>${swagger.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
                 <version>${springfox-swagger.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.swagger</groupId>
+                        <artifactId>swagger-models</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>

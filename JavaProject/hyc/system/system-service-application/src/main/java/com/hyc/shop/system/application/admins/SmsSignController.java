@@ -1,13 +1,16 @@
 package com.hyc.shop.system.application.admins;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.admin.api.SmsService;
-import cn.iocoder.mall.admin.api.bo.sms.PageSmsSignBO;
-import cn.iocoder.mall.admin.api.dto.sms.PageQuerySmsSignDTO;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.system.bo.sms.PageSmsSignBO;
+import com.hyc.shop.system.dto.sms.PageQuerySmsSignDTO;
+import com.hyc.shop.system.service.SmsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 短信服务
@@ -20,7 +23,7 @@ import org.springframework.validation.annotation.Validated;
 @Api("短信服务(签名)")
 public class SmsSignController {
 
-    @Autowired
+    @Reference(validation = "true", version = "${dubbo.provider.SmsService.version}")
     private SmsService smsService;
 
     @GetMapping("page")

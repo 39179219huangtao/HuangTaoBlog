@@ -31,6 +31,7 @@ import java.util.List;
  * @time: 19:30
  */
 @Service
+@org.apache.dubbo.config.annotation.Service(validation = "true", version = "${dubbo.provider.DeptmentService.version}")
 public class DeptmentServiceImpl implements DeptmentService {
 
     @Autowired

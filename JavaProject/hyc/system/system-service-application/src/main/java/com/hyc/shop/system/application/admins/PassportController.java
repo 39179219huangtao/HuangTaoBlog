@@ -1,10 +1,11 @@
 package com.hyc.shop.system.application.admins;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.admin.api.AdminService;
-import cn.iocoder.mall.admin.api.OAuth2Service;
-import cn.iocoder.mall.admin.api.bo.admin.AdminAuthenticationBO;
-import cn.iocoder.mall.admin.api.dto.admin.AdminAuthenticationDTO;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.system.bo.admin.AdminAuthenticationBO;
+import com.hyc.shop.system.dto.admin.AdminAuthenticationDTO;
+import com.hyc.shop.system.service.AdminService;
+import com.hyc.shop.system.service.OAuth2Service;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.Metrics;
 import io.swagger.annotations.Api;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static cn.iocoder.common.framework.vo.CommonResult.success;
+import static com.hyc.shop.common.vo.CommonResult.success;
 
 @RestController
 @RequestMapping("admins/passport")

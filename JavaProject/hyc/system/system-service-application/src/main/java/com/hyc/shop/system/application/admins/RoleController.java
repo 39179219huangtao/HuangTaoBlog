@@ -1,29 +1,31 @@
 package com.hyc.shop.system.application.admins;
 
-import cn.iocoder.common.framework.util.CollectionUtil;
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.common.framework.vo.PageResult;
-import cn.iocoder.mall.admin.api.ResourceService;
-import cn.iocoder.mall.admin.api.RoleService;
-import cn.iocoder.mall.admin.api.bo.resource.ResourceBO;
-import cn.iocoder.mall.admin.api.bo.role.RoleBO;
-import cn.iocoder.mall.admin.api.constant.ResourceConstants;
-import cn.iocoder.mall.admin.api.dto.role.RoleAddDTO;
-import cn.iocoder.mall.admin.api.dto.role.RoleAssignResourceDTO;
-import cn.iocoder.mall.admin.api.dto.role.RolePageDTO;
-import cn.iocoder.mall.admin.api.dto.role.RoleUpdateDTO;
-import cn.iocoder.mall.admin.application.convert.ResourceConvert;
-import cn.iocoder.mall.admin.application.vo.role.RoleResourceTreeNodeVO;
-import cn.iocoder.mall.admin.sdk.context.AdminSecurityContextHolder;
+
+import com.hyc.shop.common.util.CollectionUtil;
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.common.vo.PageResult;
+import com.hyc.shop.system.application.convert.ResourceConvert;
+import com.hyc.shop.system.application.vo.role.RoleResourceTreeNodeVO;
+import com.hyc.shop.system.bo.resource.ResourceBO;
+import com.hyc.shop.system.bo.role.RoleBO;
+import com.hyc.shop.system.constant.ResourceConstants;
+import com.hyc.shop.system.dto.role.RoleAddDTO;
+import com.hyc.shop.system.dto.role.RoleAssignResourceDTO;
+import com.hyc.shop.system.dto.role.RolePageDTO;
+import com.hyc.shop.system.dto.role.RoleUpdateDTO;
+import com.hyc.shop.system.sdk.context.AdminSecurityContextHolder;
+import com.hyc.shop.system.service.ResourceService;
+import com.hyc.shop.system.service.RoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static cn.iocoder.common.framework.vo.CommonResult.success;
+import static com.hyc.shop.common.vo.CommonResult.success;
 
 @RestController
 @RequestMapping("admins/role")
