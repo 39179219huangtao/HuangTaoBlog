@@ -14,7 +14,7 @@ import java.lang.management.ManagementFactory;
 
 @SpringBootApplication(scanBasePackages = {"com.hyc.shop.admin"})
 @EnableAsync(proxyTargetClass = true)
-public class AdminServiceMain {
+public class AdminApplicationMain {
 
 
     public static void main(String[] args) throws IOException {
@@ -25,7 +25,7 @@ public class AdminServiceMain {
         writer.close();
 
         System.out.println("=================>AdminServiceMain is starting");
-        SpringApplication.run(AdminServiceMain.class);
+        SpringApplication.run(AdminApplicationMain.class);
     }
 
 

@@ -6,10 +6,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication(scanBasePackages = {"com.hyc.shop.system"})
 @EnableAsync(proxyTargetClass = true)
-public class SystemApplication {
+public class SystemServiceMain {
 
     public static void main(String[] args) {
-        SpringApplication.run(SystemApplication.class, args);
+        SpringApplication.run(SystemServiceMain.class, args);
     }
 
 }
