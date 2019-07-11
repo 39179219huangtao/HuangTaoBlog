@@ -1,6 +1,8 @@
 package com.hyc.shop.product.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +15,7 @@ import javax.sql.DataSource;
 
 
 @Configuration
+@MapperScan("com.hyc.shop.product.domain.dao")
 @EnableTransactionManagement
 public class JdbcConfig implements  TransactionManagementConfigurer {
 
@@ -28,7 +31,6 @@ public class JdbcConfig implements  TransactionManagementConfigurer {
 		
 		return new DataSourceTransactionManager(dataSource());
 	}
-	
-	
- 	
+
+
 }

@@ -5,13 +5,14 @@ import lombok.experimental.Accessors;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * Product 品牌添加 DTO
  */
 @Data
 @Accessors(chain = true)
-public class ProductBrandAddDTO {
+public class ProductBrandAddDTO implements Serializable {
 
     /**
      * 名称

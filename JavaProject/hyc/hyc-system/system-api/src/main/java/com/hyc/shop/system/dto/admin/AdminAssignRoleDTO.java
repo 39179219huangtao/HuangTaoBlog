@@ -6,12 +6,14 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Set;
 
 @ApiModel("管理员分配角色 DTO")
 @Data
 @Accessors(chain = true)
-public class AdminAssignRoleDTO {
+public class AdminAssignRoleDTO implements Serializable {
+
 
     @ApiModelProperty(value = "管理员编号", required = true, example = "1")
     @NotNull(message = "管理员编号不能为空")

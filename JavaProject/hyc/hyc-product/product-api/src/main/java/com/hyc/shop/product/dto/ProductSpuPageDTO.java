@@ -4,13 +4,14 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * 商品 Spu 分页 DTO
  */
 @Data
 @Accessors(chain = true)
-public class ProductSpuPageDTO {
+public class ProductSpuPageDTO implements Serializable {
 
     /**
      * 商品名

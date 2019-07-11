@@ -5,6 +5,7 @@ import lombok.experimental.Accessors;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ import java.util.List;
  */
 @Data
 @Accessors(chain = true)
-public class ProductSkuAddOrUpdateDTO {
+public class ProductSkuAddOrUpdateDTO implements Serializable {
 
     /**
      * 规格值数组

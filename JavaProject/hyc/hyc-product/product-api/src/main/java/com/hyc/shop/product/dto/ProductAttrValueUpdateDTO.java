@@ -5,6 +5,7 @@ import lombok.experimental.Accessors;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * Product 规格值修改 DTO
@@ -13,7 +14,7 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 @Accessors(chain = true)
-public class ProductAttrValueUpdateDTO {
+public class ProductAttrValueUpdateDTO implements Serializable {
 
     /**
      * 规格值编号

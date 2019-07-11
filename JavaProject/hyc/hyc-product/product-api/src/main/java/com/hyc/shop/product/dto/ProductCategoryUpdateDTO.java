@@ -4,13 +4,14 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * 商品分类更新 DTO
  */
 @Data
 @Accessors(chain = true)
-public class ProductCategoryUpdateDTO {
+public class ProductCategoryUpdateDTO implements Serializable {
 
     /**
      * 编号

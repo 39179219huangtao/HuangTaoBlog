@@ -1,5 +1,6 @@
 package com.hyc.shop.system.application.admins;
 
+import org.springframework.util.Assert;
 
 import com.hyc.shop.common.constant.MallConstants;
 import com.hyc.shop.common.util.CollectionUtil;
