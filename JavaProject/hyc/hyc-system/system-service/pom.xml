@@ -3,26 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>hyc-pay</artifactId>
+        <artifactId>hyc-system</artifactId>
         <groupId>com.hyc.shop</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pay-service</artifactId>
+    <artifactId>system-service</artifactId>
     <dependencies>
-
-        <dependency>
-            <groupId>com.hyc.shop</groupId>
-            <artifactId>pay-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <!-- Mall 相关 -->
         <dependency>
             <groupId>com.hyc.shop</groupId>
             <artifactId>system-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -51,13 +45,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 云服务相关 -->
-        <dependency>
-            <groupId>Pingplusplus</groupId>
-            <artifactId>pingpp-java</artifactId>
-            <version>2.2.4</version>
-            <type>jar</type>
-        </dependency>
 
         <!-- spring -->
         <dependency>
@@ -74,15 +61,15 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
         </dependency>
-        <!-- mybatis分页插件 -->
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <!-- mybatis分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
         </dependency>
 
         <!-- connect pool with 阿里巴巴 -->
@@ -97,10 +84,20 @@
             <artifactId>fastjson</artifactId>
         </dependency>
 
-        <!-- Job 相关 -->
+        <!-- 工具类相关 -->
         <dependency>
-            <groupId>com.xuxueli</groupId>
-            <artifactId>xxl-job-core</artifactId>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yunpian.sdk</groupId>
+            <artifactId>yunpian-java-sdk</artifactId>
+            <version>1.2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>4.1.0</version>
         </dependency>
 
         <!-- jdbc driver -->
@@ -116,6 +113,7 @@
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
         </dependency>
+
 
         <!-- Registry 和 Config 相关 -->
         <dependency>
@@ -151,5 +149,14 @@
         </dependency>
 
     </dependencies>
+    <build>
+        <plugins>
+            <!-- 提供给 mapstruct 使用 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
