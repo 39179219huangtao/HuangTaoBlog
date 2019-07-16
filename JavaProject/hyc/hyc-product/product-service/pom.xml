@@ -52,15 +52,6 @@
         </dependency>
         <!-- mybatis -->
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
@@ -92,18 +83,6 @@
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.apache.zookeeper</groupId>-->
-            <!--<artifactId>zookeeper</artifactId>-->
-
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.github.sgroschupf</groupId>-->
-            <!--<artifactId>zkclient</artifactId>-->
-            <!--<exclusions>-->
-
-            <!--</exclusions>-->
-        <!--</dependency>-->
 
         <!-- Registry 和 Config 相关 -->
         <dependency>

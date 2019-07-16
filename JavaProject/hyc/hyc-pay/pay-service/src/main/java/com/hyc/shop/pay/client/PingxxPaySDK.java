@@ -1,12 +1,13 @@
 package com.hyc.shop.pay.client;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.pay.biz.dataobject.PayRefundDO;
-import cn.iocoder.mall.pay.biz.dataobject.PayTransactionDO;
-import cn.iocoder.mall.pay.biz.dataobject.PayTransactionExtensionDO;
+
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.ImmutableMap;
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.pay.domain.dataobject.PayRefundDO;
+import com.hyc.shop.pay.domain.dataobject.PayTransactionDO;
+import com.hyc.shop.pay.domain.dataobject.PayTransactionExtensionDO;
 import com.pingplusplus.Pingpp;
 import com.pingplusplus.exception.*;
 import com.pingplusplus.model.Charge;

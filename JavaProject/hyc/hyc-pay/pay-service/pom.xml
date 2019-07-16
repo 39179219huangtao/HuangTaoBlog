@@ -51,6 +51,16 @@
             <scope>test</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-dubbo</artifactId>
+        </dependency>
+
         <!-- 云服务相关 -->
         <dependency>
             <groupId>Pingplusplus</groupId>
@@ -66,20 +76,6 @@
         </dependency>
 
         <!-- mybatis -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-        </dependency>
-        <!-- mybatis分页插件 -->
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
