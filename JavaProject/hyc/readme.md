@@ -16,3 +16,12 @@ docker run -d --name rabbitmqLocal --publish 5671:5671 --publish 5672:5672 --pub
 zk
 docker run --privileged=true -d --name zookeeper --publish 2181:2181  -d zookeeper:latest
 ```
+
+```
+prometheus
+docker run -d --name=prometheus -p 9090:9090 -v /Users/icsoc/huangtaoBlog/HuangTaoBlog/JavaProject/hyc/hyc-common/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus --config.file=/etc/prometheus/prometheus.yml
+```
+```
+grafana
+docker run -d --name=grafana -p 3000:3000 grafana/grafana
+```
