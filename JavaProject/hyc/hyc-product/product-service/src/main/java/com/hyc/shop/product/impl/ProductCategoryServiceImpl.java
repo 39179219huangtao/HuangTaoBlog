@@ -14,6 +14,7 @@ import com.hyc.shop.product.dto.ProductCategoryUpdateDTO;
 import com.hyc.shop.product.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.Date;
@@ -27,6 +28,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     private ProductCategoryMapper productCategoryMapper;
 
     @Override
+    @Transactional
     public List<ProductCategoryBO> getListByPid(Integer pid) {
         List<ProductCategoryDO> categoryList = productCategoryMapper.selectListByPidAndStatusOrderBySort(pid, ProductCategoryConstants.STATUS_ENABLE);
         return ProductCategoryConvert.INSTANCE.convertToBO(categoryList);
