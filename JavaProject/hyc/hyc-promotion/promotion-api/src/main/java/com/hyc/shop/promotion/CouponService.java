@@ -1,9 +1,11 @@
 package com.hyc.shop.promotion;
 
-import cn.iocoder.common.framework.validator.InEnum;
-import cn.iocoder.mall.promotion.api.bo.*;
-import cn.iocoder.mall.promotion.api.constant.CouponTemplateStatusEnum;
-import cn.iocoder.mall.promotion.api.dto.*;
+
+
+import com.hyc.shop.common.validator.InEnum;
+import com.hyc.shop.promotion.bo.*;
+import com.hyc.shop.promotion.constant.CouponTemplateStatusEnum;
+import com.hyc.shop.promotion.dto.*;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;

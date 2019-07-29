@@ -1,13 +1,15 @@
 package com.hyc.shop.promotion;
 
-import cn.iocoder.common.framework.constant.CommonStatusEnum;
-import cn.iocoder.common.framework.exception.ServiceException;
-import cn.iocoder.common.framework.validator.InEnum;
-import cn.iocoder.mall.promotion.api.bo.ProductRecommendBO;
-import cn.iocoder.mall.promotion.api.bo.ProductRecommendPageBO;
-import cn.iocoder.mall.promotion.api.dto.ProductRecommendAddDTO;
-import cn.iocoder.mall.promotion.api.dto.ProductRecommendPageDTO;
-import cn.iocoder.mall.promotion.api.dto.ProductRecommendUpdateDTO;
+
+
+import com.hyc.shop.common.constant.CommonStatusEnum;
+import com.hyc.shop.common.exception.ServiceException;
+import com.hyc.shop.common.validator.InEnum;
+import com.hyc.shop.promotion.bo.ProductRecommendBO;
+import com.hyc.shop.promotion.bo.ProductRecommendPageBO;
+import com.hyc.shop.promotion.dto.ProductRecommendAddDTO;
+import com.hyc.shop.promotion.dto.ProductRecommendPageDTO;
+import com.hyc.shop.promotion.dto.ProductRecommendUpdateDTO;
 
 import java.util.List;
 

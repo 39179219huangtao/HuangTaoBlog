@@ -1,8 +1,9 @@
 package com.hyc.shop.promotion;
 
-import cn.iocoder.mall.promotion.api.bo.PromotionActivityBO;
-import cn.iocoder.mall.promotion.api.bo.PromotionActivityPageBO;
-import cn.iocoder.mall.promotion.api.dto.PromotionActivityPageDTO;
+
+import com.hyc.shop.promotion.bo.PromotionActivityBO;
+import com.hyc.shop.promotion.bo.PromotionActivityPageBO;
+import com.hyc.shop.promotion.dto.PromotionActivityPageDTO;
 
 import java.util.Collection;
 import java.util.List;

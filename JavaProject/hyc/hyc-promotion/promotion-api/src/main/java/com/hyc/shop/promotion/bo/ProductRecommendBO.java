@@ -1,6 +1,5 @@
 package com.hyc.shop.promotion.bo;
 
-import cn.iocoder.mall.promotion.api.constant.ProductRecommendTypeEnum;
 import lombok.Data;
 import lombok.experimental.Accessors;
 

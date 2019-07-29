@@ -1,6 +1,7 @@
 package com.hyc.shop.promotion.constant;
 
-import cn.iocoder.common.framework.core.IntArrayValuable;
+
+import com.hyc.shop.common.core.IntArrayValuable;
 
 import java.util.Arrays;
 

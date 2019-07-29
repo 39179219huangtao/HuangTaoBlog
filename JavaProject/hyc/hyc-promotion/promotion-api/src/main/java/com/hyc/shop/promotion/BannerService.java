@@ -1,12 +1,14 @@
 package com.hyc.shop.promotion;
 
-import cn.iocoder.common.framework.constant.CommonStatusEnum;
-import cn.iocoder.common.framework.validator.InEnum;
-import cn.iocoder.mall.promotion.api.bo.BannerBO;
-import cn.iocoder.mall.promotion.api.bo.BannerPageBO;
-import cn.iocoder.mall.promotion.api.dto.BannerAddDTO;
-import cn.iocoder.mall.promotion.api.dto.BannerPageDTO;
-import cn.iocoder.mall.promotion.api.dto.BannerUpdateDTO;
+
+
+import com.hyc.shop.common.constant.CommonStatusEnum;
+import com.hyc.shop.common.validator.InEnum;
+import com.hyc.shop.promotion.bo.BannerBO;
+import com.hyc.shop.promotion.bo.BannerPageBO;
+import com.hyc.shop.promotion.dto.BannerAddDTO;
+import com.hyc.shop.promotion.dto.BannerPageDTO;
+import com.hyc.shop.promotion.dto.BannerUpdateDTO;
 
 import java.util.List;
 

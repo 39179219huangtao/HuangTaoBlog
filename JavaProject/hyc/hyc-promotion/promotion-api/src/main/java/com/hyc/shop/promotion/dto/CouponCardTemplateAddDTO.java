@@ -1,9 +1,10 @@
 package com.hyc.shop.promotion.dto;
 
-import cn.iocoder.common.framework.validator.InEnum;
-import cn.iocoder.mall.promotion.api.constant.CouponTemplateDateTypeEnum;
-import cn.iocoder.mall.promotion.api.constant.PreferentialTypeEnum;
-import cn.iocoder.mall.promotion.api.constant.RangeTypeEnum;
+
+import com.hyc.shop.common.validator.InEnum;
+import com.hyc.shop.promotion.constant.CouponTemplateDateTypeEnum;
+import com.hyc.shop.promotion.constant.PreferentialTypeEnum;
+import com.hyc.shop.promotion.constant.RangeTypeEnum;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.hibernate.validator.constraints.Length;
