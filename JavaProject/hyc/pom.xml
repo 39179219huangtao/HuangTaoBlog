@@ -327,6 +327,7 @@
         <module>hyc-product</module>
         <module>hyc-starter</module>
         <module>hyc-system</module>
+        <module>hyc-promotion</module>
     </modules>
 
     <build>
