@@ -52,14 +52,14 @@
         </dependency>
 
 
-        <dependency>
+      <!--  <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-spring</artifactId>
         </dependency>
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-dubbo</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- 云服务相关 -->
         <dependency>

@@ -1,7 +1,6 @@
 package com.hyc.shop.pay.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import io.seata.spring.annotation.GlobalTransactionScanner;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -36,8 +35,8 @@ public class JdbcConfig implements  TransactionManagementConfigurer {
 		return new DataSourceTransactionManager(dataSource());
 	}
 
-	@Bean
-	public GlobalTransactionScanner globalTransactionScanner() {
-		return new GlobalTransactionScanner(applicationId, txServiceGroup);
-	}
+//	@Bean
+//	public GlobalTransactionScanner globalTransactionScanner() {
+//		return new GlobalTransactionScanner(applicationId, txServiceGroup);
+//	}
 }

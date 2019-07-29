@@ -6,10 +6,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication(scanBasePackages = {"com.hyc.shop.pay"})
 @EnableAsync(proxyTargetClass = true)
-public class PayApplication {
+public class PayApplicationMain {
 
     public static void main(String[] args) {
-        SpringApplication.run(PayApplication.class, args);
+        SpringApplication.run(PayApplicationMain.class, args);
     }
 
 }
