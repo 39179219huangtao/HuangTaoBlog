@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>promotion-api</module>
+        <module>promotion-service</module>
     </modules>
 
 
