@@ -1,8 +1,10 @@
 package com.hyc.shop.order;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.order.api.bo.*;
-import cn.iocoder.mall.order.api.dto.*;
+
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.order.bo.*;
+import com.hyc.shop.order.dto.*;
 
 import java.util.List;
 

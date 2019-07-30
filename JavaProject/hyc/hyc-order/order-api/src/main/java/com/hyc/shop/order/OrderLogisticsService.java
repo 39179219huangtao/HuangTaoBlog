@@ -1,9 +1,10 @@
 package com.hyc.shop.order;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.order.api.bo.OrderLastLogisticsInfoBO;
-import cn.iocoder.mall.order.api.bo.OrderLogisticsInfoBO;
-import cn.iocoder.mall.order.api.bo.OrderLogisticsInfoWithOrderBO;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.order.bo.OrderLastLogisticsInfoBO;
+import com.hyc.shop.order.bo.OrderLogisticsInfoBO;
+import com.hyc.shop.order.bo.OrderLogisticsInfoWithOrderBO;
 
 /**
  * 订单物流信息

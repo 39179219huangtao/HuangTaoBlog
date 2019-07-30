@@ -1,10 +1,12 @@
 package com.hyc.shop.order;
 
-import cn.iocoder.mall.order.api.bo.*;
-import cn.iocoder.mall.order.api.dto.OrderCommentCreateDTO;
-import cn.iocoder.mall.order.api.dto.OrderCommentPageDTO;
-import cn.iocoder.mall.order.api.dto.OrderCommentStateInfoPageDTO;
-import cn.iocoder.mall.order.api.dto.OrderCommentTimeOutPageDTO;
+
+
+import com.hyc.shop.order.bo.*;
+import com.hyc.shop.order.dto.OrderCommentCreateDTO;
+import com.hyc.shop.order.dto.OrderCommentPageDTO;
+import com.hyc.shop.order.dto.OrderCommentStateInfoPageDTO;
+import com.hyc.shop.order.dto.OrderCommentTimeOutPageDTO;
 
 import java.util.List;
 

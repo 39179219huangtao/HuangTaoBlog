@@ -1,10 +1,11 @@
 package com.hyc.shop.order;
 
-import cn.iocoder.common.framework.vo.CommonResult;
-import cn.iocoder.mall.order.api.bo.OrderReturnInfoBO;
-import cn.iocoder.mall.order.api.bo.OrderReturnListBO;
-import cn.iocoder.mall.order.api.dto.OrderReturnApplyDTO;
-import cn.iocoder.mall.order.api.dto.OrderReturnQueryDTO;
+
+import com.hyc.shop.common.vo.CommonResult;
+import com.hyc.shop.order.bo.OrderReturnInfoBO;
+import com.hyc.shop.order.bo.OrderReturnListBO;
+import com.hyc.shop.order.dto.OrderReturnApplyDTO;
+import com.hyc.shop.order.dto.OrderReturnQueryDTO;
 
 /**
  * 订单退货

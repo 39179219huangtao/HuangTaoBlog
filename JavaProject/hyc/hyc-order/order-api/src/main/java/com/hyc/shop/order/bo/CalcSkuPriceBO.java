@@ -1,6 +1,6 @@
 package com.hyc.shop.order.bo;
 
-import cn.iocoder.mall.promotion.api.bo.PromotionActivityBO;
+import com.hyc.shop.promotion.bo.PromotionActivityBO;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
